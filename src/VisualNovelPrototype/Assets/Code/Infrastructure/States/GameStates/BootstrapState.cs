@@ -19,7 +19,7 @@ namespace Code.Infrastructure.States.GameStates
 		public async void Enter()
 		{
 			await InitAddressables();
-			//await InitNaninovel();
+			await InitNaninovel();
 			EnterToInitializeProgressState();
 		}
 

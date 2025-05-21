@@ -45,16 +45,16 @@ namespace Naninovel
             UniTaskScheduler.UnobservedExceptionWriteLogType = engineConfig.AsyncExceptionLogType;
 
             var initializationUI = default(ScriptableUIBehaviour);
-            if (engineConfig.ShowInitializationUI)
-            {
-                var initPrefab = engineConfig.CustomInitializationUI
-                    ? engineConfig.CustomInitializationUI
-                    : Engine.LoadInternalResource<ScriptableUIBehaviour>(initPrefabName);
-                initializationUI = Instantiate(initPrefab);
-                initializationUI.Show();
-            }
+      if (engineConfig.ShowInitializationUI)
+      {
+        var initPrefab = engineConfig.CustomInitializationUI
+            ? engineConfig.CustomInitializationUI
+            : Engine.LoadInternalResource<ScriptableUIBehaviour>(initPrefabName);
+        initializationUI = Instantiate(initPrefab);
+        initializationUI.Show();
+      }
 
-            var initData = customInitializationData?.ToList() ?? new List<ServiceInitializationData>();
+      var initData = customInitializationData?.ToList() ?? new List<ServiceInitializationData>();
             var overridenTypes = initData.Where(d => d.Override != null).Select(d => d.Override).ToList();
             foreach (var type in Engine.Types)
             {
