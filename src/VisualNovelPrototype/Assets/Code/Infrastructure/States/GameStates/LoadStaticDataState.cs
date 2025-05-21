@@ -1,6 +1,7 @@
 using Code.Infrastructure.AssetsManagement;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Infrastructure.States.StateMachine;
+using Code.Infrastructure.StaticData;
 using Cysharp.Threading.Tasks;
 
 namespace Code.Infrastructure.States.GameStates

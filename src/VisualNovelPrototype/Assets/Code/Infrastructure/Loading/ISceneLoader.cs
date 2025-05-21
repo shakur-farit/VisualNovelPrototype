@@ -1,6 +1,6 @@
 using System;
 
-namespace Code.Infrastructure.States.GameStates
+namespace Code.Infrastructure.Loading
 {
 	public interface ISceneLoader
 	{

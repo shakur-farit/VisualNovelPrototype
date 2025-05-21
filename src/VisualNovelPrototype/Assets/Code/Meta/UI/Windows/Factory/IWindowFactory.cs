@@ -1,6 +1,7 @@
+using Code.Meta.UI.Windows.Behaviours;
 using UnityEngine;
 
-namespace Code.Infrastructure.AssetsManagement
+namespace Code.Meta.UI.Windows.Factory
 {
 	public interface IWindowFactory
 	{

@@ -1,10 +1,12 @@
+using Code.Infrastructure.Loading;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
+using Code.Meta.UI.Windows.Services;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Infrastructure.AssetsManagement
+namespace Code.Meta.UI.Windows.Behaviours
 {
 	public class MainMenuWindow : BaseWindow
 	{
@@ -24,12 +26,12 @@ namespace Code.Infrastructure.AssetsManagement
 
 		protected override void Initialize()
 		{
-			//_startGameButton.onClick.AddListener(EnterToBattle);
+			_startGameButton.onClick.AddListener(EnterToGameplay);
 			_startGameButton.onClick.AddListener(CloseWindow);
 		}
 
-		//private void EnterToBattle() =>
-		//	_stateMachine.Enter<LoadingBattleState, string>(Scenes.Gameplay);
+		private void EnterToGameplay() =>
+			_stateMachine.Enter<LoadingGameplayState, string>(Scenes.Gameplay);
 
 		private void CloseWindow() =>
 			_windowService.Close(WindowId.MainMenuWindow);

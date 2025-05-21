@@ -1,7 +1,9 @@
+using Code.Infrastructure.StaticData;
+using Code.Meta.UI.Windows.Behaviours;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Infrastructure.AssetsManagement
+namespace Code.Meta.UI.Windows.Factory
 {
 	public class WindowFactory : IWindowFactory
 	{

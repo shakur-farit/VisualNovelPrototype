@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Code.Infrastructure.States.GameStates
+namespace Code.Infrastructure
 {
 	public interface ICoroutineRunner
 	{

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Code.Infrastructure.AssetsManagement
+namespace Code.Meta.UI.Windows.Configs
 {
-	[CreateAssetMenu(menuName = "Dungeon Gunner/Window Config", fileName = "WindowConfig")]
+	[CreateAssetMenu(menuName = "Novel/Window Config", fileName = "WindowConfig")]
 	public class WindowConfig : ScriptableObject
 	{
 		public WindowId TypeId;

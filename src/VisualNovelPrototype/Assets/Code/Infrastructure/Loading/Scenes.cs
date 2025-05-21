@@ -1,4 +1,4 @@
-namespace Code.Infrastructure.States.GameStates
+namespace Code.Infrastructure.Loading
 {
 	public static class Scenes
 	{

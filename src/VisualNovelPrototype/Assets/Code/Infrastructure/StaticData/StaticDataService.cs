@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Code.Infrastructure.AssetsManagement;
+using Code.Meta.UI.Windows;
+using Code.Meta.UI.Windows.Configs;
 using Cysharp.Threading.Tasks;
 
-namespace Code.Infrastructure.AssetsManagement
+namespace Code.Infrastructure.StaticData
 {
 	public class StaticDataService : IStaticDataService
 	{

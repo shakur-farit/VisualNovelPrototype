@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Code.Infrastructure.States.GameStates
+namespace Code.Infrastructure.Loading
 {
 	public class SceneLoader : ISceneLoader
 	{

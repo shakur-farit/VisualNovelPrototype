@@ -1,4 +1,4 @@
-using Code.Infrastructure.AssetsManagement;
+using Code.Meta.UI.Windows.Factory;
 using UnityEngine;
 using Zenject;
 
@@ -6,15 +6,15 @@ namespace Code.Infrastructure.Installers
 {
 	public class UIInitializer : MonoBehaviour, IInitializable
 	{
+		private IWindowFactory _windowFactory;
+
 		public RectTransform UIRoot;
 
-		private IWindowFactory _factory;
-
 		[Inject]
-		private void Construct(IWindowFactory factory) =>
-			_factory = factory;
+		private void Construct(IWindowFactory windowFactory) =>
+			_windowFactory = windowFactory;
 
 		public void Initialize() => 
-			_factory.SetUIRoot(UIRoot);
+			_windowFactory.SetUIRoot(UIRoot);
 	}
 }
