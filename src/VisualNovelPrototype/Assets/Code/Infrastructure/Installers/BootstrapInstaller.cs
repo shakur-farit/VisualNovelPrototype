@@ -6,6 +6,7 @@ using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.StaticData;
 using Code.Meta.UI.Windows.Factory;
 using Code.Meta.UI.Windows.Services;
+using Code.Progress.Provider;
 using Zenject;
 
 namespace Code.Infrastructure.Installers
@@ -20,6 +21,7 @@ namespace Code.Infrastructure.Installers
 			BindInfrastructureServices();
 			BindAssetManagementServices();
 			BindCommonServices();
+			BindProgressServices();
 			BindGameplayServices();
 			BindUIFactories();
 			BindUIServices();
@@ -46,6 +48,8 @@ namespace Code.Infrastructure.Installers
 			Container.BindInterfacesAndSelfTo<GameplayState>().AsSingle();
 		}
 
+		private void BindProgressServices() => 
+			Container.Bind<IProgressProvider>().To<ProgressProvider>().AsSingle();
 
 		private void BindGameplayServices()
 		{
