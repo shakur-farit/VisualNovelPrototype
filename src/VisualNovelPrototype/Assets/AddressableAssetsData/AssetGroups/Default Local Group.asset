@@ -29,6 +29,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae5bfa0f16cca5143b6aadcaa305c6ca
+    m_Address: Assets/StaticData/Quests/VisitStrillQuestConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - QuestConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}
   m_SchemaSet:

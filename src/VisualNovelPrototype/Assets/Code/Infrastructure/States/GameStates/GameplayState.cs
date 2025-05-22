@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Progress.Provider;
 using Naninovel;
@@ -7,7 +6,11 @@ namespace Code.Infrastructure.States.GameStates
 {
 	public class GameplayState : IState
 	{
+		private const string FirstLocation = "FirstLocation";
+		private const string PlayerNameKey = "playerName";
+
 		private readonly IProgressProvider _progressProvider;
+
 
 		public GameplayState(IProgressProvider progressProvider) => 
 			_progressProvider = progressProvider;
@@ -27,14 +30,14 @@ namespace Code.Infrastructure.States.GameStates
 		{
 			IScriptPlayer scriptPlayer = Engine.GetService<IScriptPlayer>();
 
-			await scriptPlayer.PreloadAndPlayAsync("FirstLocation");
+			await scriptPlayer.PreloadAndPlayAsync(FirstLocation);
 		}
 
 		private void InitPlayerName()
 		{
 			string playerName = _progressProvider.ProgressData.PlayerData.PlayerName;
 			Engine.GetService<ICustomVariableManager>()
-				.SetVariableValue("playerName", playerName);
+				.SetVariableValue(PlayerNameKey, playerName);
 		}
 
 		private async UniTask InitNaninovel() =>

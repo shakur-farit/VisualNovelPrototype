@@ -94,7 +94,7 @@ MonoBehaviour:
         width: 1
         height: 1
       BakedLookDirection: 2
-      DisplayName: "\u0410\u043B\u0435\u043A\u0441"
+      DisplayName: Alex
       UseCharacterColor: 0
       NameColor: {r: 1, g: 1, b: 1, a: 1}
       MessageColor: {r: 1, g: 1, b: 1, a: 1}
@@ -122,7 +122,7 @@ MonoBehaviour:
       guid: 0ce1a0b5-8d12-4de3-a1e0-9a3491a1b844
       customData:
         rid: -2
-      Pivot: {x: 0.5, y: 0}
+      Pivot: {x: 0, y: 0}
       PixelsPerUnit: 250
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
@@ -135,8 +135,8 @@ MonoBehaviour:
         y: 0
         width: 1
         height: 1
-      BakedLookDirection: 1
-      DisplayName: 
+      BakedLookDirection: 0
+      DisplayName: '{playerName}'
       UseCharacterColor: 0
       NameColor: {r: 1, g: 1, b: 1, a: 1}
       MessageColor: {r: 1, g: 1, b: 1, a: 1}
