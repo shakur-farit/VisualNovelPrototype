@@ -51,7 +51,6 @@ namespace Code.Meta.UI.Windows.Behaviours
 			{
 				SavePlayerName(_name);
 				EnterToGameplay();
-				CloseWindow();
 			}
 			else
 			{

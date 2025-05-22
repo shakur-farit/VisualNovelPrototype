@@ -1,21 +1,40 @@
+using System.Threading.Tasks;
 using Code.Infrastructure.States.StateInfrastructure;
+using Code.Progress.Provider;
 using Naninovel;
 
 namespace Code.Infrastructure.States.GameStates
 {
 	public class GameplayState : IState
 	{
+		private readonly IProgressProvider _progressProvider;
+
+		public GameplayState(IProgressProvider progressProvider) => 
+			_progressProvider = progressProvider;
+
 		public async void Enter()
 		{
 			await InitNaninovel();
-
-			var scriptPlayer = Engine.GetService<IScriptPlayer>();
-
-			 scriptPlayer.PreloadAndPlayAsync("FirstLocation");
+			InitPlayerName();
+			await StartScenario();
 		}
 
 		public void Exit()
 		{
+		}
+
+		private async UniTask StartScenario()
+		{
+			IScriptPlayer scriptPlayer = Engine.GetService<IScriptPlayer>();
+
+			await scriptPlayer.PreloadAndPlayAsync("FirstLocation");
+		}
+
+		private void InitPlayerName()
+		{
+			string playerName = _progressProvider.ProgressData.PlayerData.PlayerName;
+			Engine.GetService<ICustomVariableManager>()
+				.SetVariableValue("playerName", playerName);
 		}
 
 		private async UniTask InitNaninovel() =>

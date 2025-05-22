@@ -1,2 +1,41 @@
+@back MainBackground
+
 @back FirstLocation
+
+@char Hero.Default pos: -200
+Очередная дыра.
+Хотя... Тут не так уж и дурно. Покрайней мере по сравнению с тем что было в предыдущем городе.
+Посмотрим как тут можно подзаработать.
+@hide Hero
+
+@char Alex.Default pos:60
+Alex: Вот это да. Это же {playerName} собственной персоной. Слава о тебе разнеслась далеко за пределы твоего родного городка.
+@hide Alex
+
+@char Hero.Default pos: -60
+Ха... Овечка сама пришла.
+@hide Hero
+
+@char Alex.Default pos:60
+Alex: Что?
+@hide Alex
+
+@char Hero.Default pos: -60
+Ничего. Мы знакомы?
+@hide Hero
+
+@char Alex.Default pos:60
+Alex: Нет. Но я знаю тебя. Ты ведь охотник. У меня есть задание для тебя. Тебе нужно навестить моего старого знакомого.
+Alex: У него есть вещица... МОЯ вещица. Я хочу что бы ты ее вернул мне. Любой ценой. Ты найдешь его на Вокер Стрит. Он занимается там своими фокусами. Возьмешся?
+@hide Alex
+
+@char Hero.Default pos: -60
+Не вопрос.
+@hide Hero
+
+@char Alex.Default pos:60
+Alex: Отлично. Буду ждать тебя здесь.
+@hide Alex
+
+@wait 1
 @stop

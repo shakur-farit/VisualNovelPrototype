@@ -99,6 +99,19 @@ MonoBehaviour:
     Resources: []
   - Id: Backgrounds/566e1e0c-b065-4ed5-97d8-baf8c156a665
     Resources:
-    - name: bg_Scene
+    - name: MainBackground
       pathPrefix: Backgrounds/MainBackground
-      guid: cc23b315f775d8541aa30042704019af
+      guid: 1948e4d7013e50a4f9b81b4531194020
+    - name: FirstLocation
+      pathPrefix: Backgrounds/MainBackground
+      guid: 6491a02d01e50e440afc413f7c0e3361
+  - Id: Characters/52777063-d1ae-4410-a6a1-46b75496b94a
+    Resources:
+    - name: Default
+      pathPrefix: Characters/Alex
+      guid: 232c5aeb90c9ed24fbd70d839c3f5841
+  - Id: Characters/0ce1a0b5-8d12-4de3-a1e0-9a3491a1b844
+    Resources:
+    - name: Default
+      pathPrefix: Characters/Hero
+      guid: 72bc19b126a0dee45ad554aa32afbc5a
