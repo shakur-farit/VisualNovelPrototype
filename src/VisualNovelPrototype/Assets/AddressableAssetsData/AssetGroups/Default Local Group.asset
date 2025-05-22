@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d690d688121346b488ed9072eb5b4962
+    m_Address: Assets/StaticData/Windows/InvalidNameWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}
   m_SchemaSet:

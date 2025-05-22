@@ -1,7 +1,7 @@
 using Code.Infrastructure.AssetsManagement;
 using Code.Infrastructure.States.StateInfrastructure;
 using Code.Infrastructure.States.StateMachine;
-using Naninovel;
+using Cysharp.Threading.Tasks;
 
 namespace Code.Infrastructure.States.GameStates
 {
@@ -19,7 +19,6 @@ namespace Code.Infrastructure.States.GameStates
 		public async void Enter()
 		{
 			await InitAddressables();
-			await InitNaninovel();
 			EnterToInitializeProgressState();
 		}
 
@@ -28,11 +27,7 @@ namespace Code.Infrastructure.States.GameStates
 
 		}
 
-
-		private async UniTask InitNaninovel() => 
-			await RuntimeInitializer.InitializeAsync();
-
-		private async Cysharp.Threading.Tasks.UniTask InitAddressables() =>
+		private async UniTask InitAddressables() =>
 			await _assetProvider.Initialize();
 
 		private void EnterToInitializeProgressState() =>

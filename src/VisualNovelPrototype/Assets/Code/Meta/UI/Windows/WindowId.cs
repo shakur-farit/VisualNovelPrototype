@@ -4,5 +4,6 @@ namespace Code.Meta.UI.Windows
 	{
 		Unknown = 0,
 		MainMenuWindow = 1,
+		InvalidNameWindow = 2,
 	}
 }
