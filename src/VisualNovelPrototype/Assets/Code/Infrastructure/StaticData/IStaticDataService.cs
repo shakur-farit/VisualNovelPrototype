@@ -11,5 +11,6 @@ namespace Code.Infrastructure.StaticData
 		UniTask Load();
 		WindowConfig GetWindowConfig(WindowId id);
 		QuestConfig GetQuestConfig(QuestTypeId id);
+		CardConfig GetCardConfig(CardTypeId id);
 	}
 }

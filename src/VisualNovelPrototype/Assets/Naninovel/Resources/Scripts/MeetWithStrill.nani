@@ -10,6 +10,25 @@ Hero: Хей. Ты Стрилл?
 Strill: Смотря кто спрашивает.
 @hide Strill
 
+@char Hero.Default pos:0
+Hero: Меня отправил Алекс. Он очень настойчиво просил вернуть ему его вещицу.
+@hide Hero
 
+@char Strill.Default pos:80
+Strill: Просил значит... А если я откажусь?
+@hide Strill
+
+@char Hero.Default pos:0
+Hero: Значит мне придеться отбирать эту вещицу у тебя.
+@hide Hero
+
+@char Strill.Default pos:80
+Strill: Ого... Вот это прыть. Ты хоть знаешь о чем идет речь?
+Strill: Похоже что нет... Поступим так.
+Strill: Сыграй со мной в игру. И если ты победишь я тебе расскажу и о вещице и даже где ее найти.
+Strill: А если нет. То я придумаю для тебя другое занятее. Идет?
+@hide Strill
+
+@startMinigame
 
 @stop

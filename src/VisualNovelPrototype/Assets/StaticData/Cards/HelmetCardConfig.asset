@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4965cb74ef53704897c50184b3974fa, type: 3}
+  m_Name: HelmetCardConfig
+  m_EditorClassIdentifier: 
+  TypeId: 4
+  UpSprite: {fileID: 21300000, guid: 11a7585765b4705419f42f5367816cdc, type: 3}
+  InsideSprite: {fileID: 21300000, guid: c92b55b65b6d35344a9672f869af5636, type: 3}
+  ViewPrefab: {fileID: 448850412685296917, guid: da596b2565e018d4e8194eda0acc26a8, type: 3}

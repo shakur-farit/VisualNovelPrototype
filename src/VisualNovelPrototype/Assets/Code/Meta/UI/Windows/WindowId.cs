@@ -6,6 +6,7 @@ namespace Code.Meta.UI.Windows
 		MainMenuWindow = 1,
 		InvalidNameWindow = 2,
 		QuestWindow = 3,
-		Hud = 4
+		Hud = 4,
+		MinigameWindow = 5,
 	}
 }

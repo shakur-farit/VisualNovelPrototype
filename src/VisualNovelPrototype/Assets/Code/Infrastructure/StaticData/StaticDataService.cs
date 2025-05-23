@@ -14,9 +14,11 @@ namespace Code.Infrastructure.StaticData
 	{
 		private const string WindowConfigLabel = "WindowConfig";
 		private const string QuestConfigLabel = "QuestConfig";
+		private const string CardConfigLabel = "CardConfig";
 		
 		private Dictionary<WindowId, WindowConfig> _windowById;
 		private Dictionary<QuestTypeId, QuestConfig> _questById;
+		private Dictionary<CardTypeId, CardConfig> _cardById;
 		
 		private readonly IAssetProvider _assetProvider;
 
@@ -45,6 +47,14 @@ namespace Code.Infrastructure.StaticData
 			throw new Exception($"Quest config for {id} was not found");
 		}
 
+		public CardConfig GetCardConfig(CardTypeId id)
+		{
+			if (_cardById.TryGetValue(id, out CardConfig config))
+				return config;
+
+			throw new Exception($"Card config for {id} was not found");
+		}
+
 		private async UniTask LoadWindows() =>
 			_windowById = (await _assetProvider.LoadAll<WindowConfig>(WindowConfigLabel))
 				.ToDictionary(x => x.TypeId, x => x);
@@ -52,5 +62,9 @@ namespace Code.Infrastructure.StaticData
 		private async UniTask LoadQuests() =>
 			_questById = (await _assetProvider.LoadAll<QuestConfig>(QuestConfigLabel))
 				.ToDictionary(x => x.Id, x => x);
+
+		private async UniTask LoadCards() =>
+			_cardById = (await _assetProvider.LoadAll<CardConfig>(CardConfigLabel))
+				.ToDictionary(x => x.TypeId, x => x);
 	}
 }

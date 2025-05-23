@@ -47,6 +47,36 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b852f6cbb98361e45b8b5f3d6d737437
+    m_Address: Assets/StaticData/Cards/BombCardConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ee0d3185517eee438f20dad44d9835b
+    m_Address: Assets/StaticData/Cards/HelmetCardConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6bcb844ec2d1d71499b60afb63c913ed
+    m_Address: Assets/StaticData/Cards/BulletCardConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86ccdc725a3b4064ea062a55fb3d6d54
+    m_Address: Assets/StaticData/Cards/ShieldCardConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ada92a450223a2e4cac0b1bad976b8ab
+    m_Address: Assets/StaticData/Windows/MinigameWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}
   m_SchemaSet:
