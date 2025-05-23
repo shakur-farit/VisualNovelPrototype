@@ -1,7 +1,7 @@
 @back FirstLocation
 
 @showHud
-@addQuest QuestId=VisitStrill
+
 @char Hero.Default pos:0
 Hero: Очередная дыра.
 Hero: Хотя... Тут не так уж и дурно. Покрайней мере по сравнению с тем что было в предыдущем городе.
@@ -33,6 +33,7 @@ Alex: У него есть вещица... МОЯ вещица. Я хочу чт
 Hero: Не вопрос.
 @hide Hero
 
+@addQuest id:VisitStrill
 
 @char Alex.Default pos:60 look:left
 Alex: Отлично. Буду ждать тебя здесь.
@@ -40,7 +41,9 @@ Alex: Отлично. Буду ждать тебя здесь.
 
 @wait 1
 
+@hideHud
+
 @hideAll
 
-@goto SecondLocation
+@goto MeetWithStrill
 @stop

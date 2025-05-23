@@ -1,0 +1,15 @@
+@back SecondLocation
+
+@showHud
+
+@char Hero.Default pos:0
+Hero: Хей. Ты Стрилл?
+@hide Hero
+
+@char Strill.Default pos:80
+Strill: Смотря кто спрашивает.
+@hide Strill
+
+
+
+@stop

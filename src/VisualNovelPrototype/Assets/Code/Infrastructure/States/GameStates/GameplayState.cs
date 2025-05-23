@@ -6,7 +6,7 @@ namespace Code.Infrastructure.States.GameStates
 {
 	public class GameplayState : IState
 	{
-		private const string FirstLocation = "FirstLocation";
+		private const string ScenarioEnterPoint = "MeetWithAlex";
 		private const string PlayerNameKey = "playerName";
 
 		private readonly IProgressProvider _progressProvider;
@@ -30,7 +30,7 @@ namespace Code.Infrastructure.States.GameStates
 		{
 			IScriptPlayer scriptPlayer = Engine.GetService<IScriptPlayer>();
 
-			await scriptPlayer.PreloadAndPlayAsync(FirstLocation);
+			await scriptPlayer.PreloadAndPlayAsync(ScenarioEnterPoint);
 		}
 
 		private void InitPlayerName()

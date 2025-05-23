@@ -1,14 +1,14 @@
 using System;
+using Code.Gameplay.Quest.Configs;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Code.Meta.UI.Windows
+namespace Code.Gameplay.Quest.Behaviours
 {
 	public class QuestItem : MonoBehaviour
 	{
 		[SerializeField] private TextMeshProUGUI _title;
-		[SerializeField] private TextMeshProUGUI _description;
 		[SerializeField] private Button _selectButton;
 
 		private QuestStatus _status;
@@ -18,16 +18,15 @@ namespace Code.Meta.UI.Windows
 		{
 			_status = config.Status;
 			_title.text = config.Title;
-			_description.text = config.Description;
 			_onSelected = action;
 
-			BindEvents();
+			BindEvents(config.Description);
 		}
 
-		private void BindEvents()
+		private void BindEvents(string description)
 		{
 			_selectButton.onClick.RemoveAllListeners();
-			_selectButton.onClick.AddListener(() => _onSelected?.Invoke(_description.text));
+			_selectButton.onClick.AddListener(() => _onSelected?.Invoke(description));
 		}
 	}
 }

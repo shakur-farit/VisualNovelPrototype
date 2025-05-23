@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Code.Meta.UI.Windows
+namespace Code.Gameplay.Quest.Service
 {
 	public interface IQuestService
 	{

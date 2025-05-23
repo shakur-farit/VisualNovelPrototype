@@ -1,3 +1,5 @@
+using Code.Gameplay.Quest.Factory;
+using Code.Gameplay.Quest.Service;
 using Code.Infrastructure.AssetsManagement;
 using Code.Infrastructure.Loading;
 using Code.Infrastructure.States.Factory;

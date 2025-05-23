@@ -1,9 +1,10 @@
+using Code.Meta.UI.Windows;
 using Code.Meta.UI.Windows.Services;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Meta.UI.Windows
+namespace Code.Gameplay.Hud.Beahaviours
 {
 	public class QuestButton : MonoBehaviour
 	{

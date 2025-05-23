@@ -1,3 +1,5 @@
+using Code.Gameplay.Quest;
+using Code.Gameplay.Quest.Configs;
 using Code.Meta.UI.Windows;
 using Code.Meta.UI.Windows.Configs;
 using Cysharp.Threading.Tasks;

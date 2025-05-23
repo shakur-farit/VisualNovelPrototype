@@ -1,4 +1,4 @@
-namespace Code.Meta.UI.Windows
+namespace Code.Gameplay.Quest
 {
 	public enum QuestStatus
 	{

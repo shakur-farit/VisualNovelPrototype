@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Meta.UI.Windows
+namespace Code.Gameplay.Quest.Configs
 {
 	[CreateAssetMenu(menuName = "Novel/Quest Config", fileName = "QuestConfig")]
 	public class QuestConfig : ScriptableObject

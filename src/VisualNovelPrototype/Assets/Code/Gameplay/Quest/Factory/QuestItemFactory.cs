@@ -1,9 +1,11 @@
 using System;
+using Code.Gameplay.Quest.Behaviours;
+using Code.Gameplay.Quest.Configs;
 using Code.Infrastructure.StaticData;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Meta.UI.Windows
+namespace Code.Gameplay.Quest.Factory
 {
 	public class QuestItemFactory : IQuestItemFactory
 	{

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Visit Strill
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2649710fee943d844bcea62022b1f4cf, type: 2}
   m_sharedMaterial: {fileID: 8120199949304618070, guid: 2649710fee943d844bcea62022b1f4cf, type: 2}
@@ -220,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3554720617287528668}
   - component: {fileID: 4446009073013493278}
+  - component: {fileID: 3177943584493736973}
   m_Layer: 5
   m_Name: QuestItem
   m_TagString: Untagged
@@ -291,3 +292,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3177943584493736973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471517480807277123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4ed34b07c26d842803f0443e017341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: {fileID: 897802531332798956}
+  _description: {fileID: 0}
+  _selectButton: {fileID: 4446009073013493278}

@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Code.Gameplay.Quest;
+using Code.Gameplay.Quest.Configs;
 using Code.Infrastructure.AssetsManagement;
 using Code.Meta.UI.Windows;
 using Code.Meta.UI.Windows.Configs;

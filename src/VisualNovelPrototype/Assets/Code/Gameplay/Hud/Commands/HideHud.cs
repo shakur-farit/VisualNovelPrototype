@@ -5,13 +5,13 @@ using Zenject;
 
 namespace Code.Gameplay.Hud.Commands
 {
-	public class ShowHud : Command 
+	public class HideHud : Command
 	{
 		public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
 		{
 			DiContainer container = ProjectContext.Instance.Container;
 			IWindowService windowService = container.Resolve<IWindowService>();
-			windowService.Open(WindowId.Hud);
+			windowService.Close(WindowId.Hud);
 			return UniTask.CompletedTask;
 		}
 	}

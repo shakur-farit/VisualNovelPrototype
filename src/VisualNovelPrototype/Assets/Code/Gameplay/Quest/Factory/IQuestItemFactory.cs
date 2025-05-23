@@ -1,7 +1,8 @@
 using System;
+using Code.Gameplay.Quest.Behaviours;
 using UnityEngine;
 
-namespace Code.Meta.UI.Windows
+namespace Code.Gameplay.Quest.Factory
 {
 	public interface IQuestItemFactory
 	{

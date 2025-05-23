@@ -118,3 +118,8 @@ MonoBehaviour:
     - name: Default
       pathPrefix: Characters/Hero
       guid: 72bc19b126a0dee45ad554aa32afbc5a
+  - Id: Characters/6d259ff4-aec0-4b64-a45b-735ad4ea0d47
+    Resources:
+    - name: Default
+      pathPrefix: Characters/Strill
+      guid: 3462cf2f2e63ab94e9474d499b5311d0
