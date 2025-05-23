@@ -4,7 +4,9 @@ namespace Code.Meta.UI.Windows
 {
 	public class QuestService : IQuestService
 	{
-		private Dictionary<QuestTypeId, QuestStatus> _quests;
+		private readonly Dictionary<QuestTypeId, QuestStatus> _quests = new();
+
+		public Dictionary<QuestTypeId, QuestStatus> Quests => _quests;
 
 		public void AddQuest(QuestTypeId id) => 
 			_quests.Add(id, QuestStatus.Active);

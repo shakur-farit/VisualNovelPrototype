@@ -9,5 +9,6 @@ namespace Code.Meta.UI.Windows
 		public QuestStatus Status;
 		public string Title;
 		public string Description;
+		public GameObject PrefabView;
 	}
 }

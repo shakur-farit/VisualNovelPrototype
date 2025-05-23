@@ -35,6 +35,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - QuestConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8555339b7f32c6848a2bcfb16d55f74b
+    m_Address: Assets/StaticData/Windows/QuestWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ebdda3774c49d54db0ad22af5f68757
+    m_Address: Assets/StaticData/Windows/HudConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}
   m_SchemaSet:

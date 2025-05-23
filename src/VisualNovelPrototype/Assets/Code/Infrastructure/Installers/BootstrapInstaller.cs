@@ -4,6 +4,7 @@ using Code.Infrastructure.States.Factory;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.StaticData;
+using Code.Meta.UI.Windows;
 using Code.Meta.UI.Windows.Factory;
 using Code.Meta.UI.Windows.Services;
 using Code.Progress.Provider;
@@ -23,6 +24,7 @@ namespace Code.Infrastructure.Installers
 			BindCommonServices();
 			BindProgressServices();
 			BindGameplayServices();
+			BindGameplayFactories();
 			BindUIFactories();
 			BindUIServices();
 		}
@@ -54,6 +56,12 @@ namespace Code.Infrastructure.Installers
 		private void BindGameplayServices()
 		{
 			Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
+			Container.Bind<IQuestService>().To<QuestService>().AsSingle();
+		}
+
+		private void BindGameplayFactories()
+		{
+			Container.Bind<IQuestItemFactory>().To<QuestItemFactory>().AsSingle();
 		}
 
 

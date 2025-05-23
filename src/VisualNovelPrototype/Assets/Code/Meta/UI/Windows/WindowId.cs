@@ -5,5 +5,7 @@ namespace Code.Meta.UI.Windows
 		Unknown = 0,
 		MainMenuWindow = 1,
 		InvalidNameWindow = 2,
+		QuestWindow = 3,
+		Hud = 4
 	}
 }
