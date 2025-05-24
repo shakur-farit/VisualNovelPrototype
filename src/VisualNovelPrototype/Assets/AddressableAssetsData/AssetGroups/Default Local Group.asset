@@ -47,25 +47,25 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b852f6cbb98361e45b8b5f3d6d737437
+  - m_GUID: 67408105bf568c940a8a2a2cc63b8b0e
     m_Address: Assets/StaticData/Cards/BombCardConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CardConfig
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1ee0d3185517eee438f20dad44d9835b
+  - m_GUID: 80a0a013c3643f94faaa54d274d5ba92
     m_Address: Assets/StaticData/Cards/HelmetCardConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CardConfig
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6bcb844ec2d1d71499b60afb63c913ed
+  - m_GUID: 4aa412a1f986bb84a8010512193033a1
     m_Address: Assets/StaticData/Cards/BulletCardConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - CardConfig
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 86ccdc725a3b4064ea062a55fb3d6d54
+  - m_GUID: 67a23185bed030b4eab9e78a0b1a862b
     m_Address: Assets/StaticData/Cards/ShieldCardConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels:

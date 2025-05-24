@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4965cb74ef53704897c50184b3974fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 57250207b34486548a9eabd199b21395, type: 3}
   m_Name: BulletCardConfig
   m_EditorClassIdentifier: 
   TypeId: 3

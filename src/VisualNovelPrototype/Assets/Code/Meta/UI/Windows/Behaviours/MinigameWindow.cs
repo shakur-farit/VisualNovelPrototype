@@ -1,3 +1,4 @@
+using Code.Gameplay.Quest;
 using UnityEngine;
 using Zenject;
 
@@ -7,10 +8,19 @@ namespace Code.Meta.UI.Windows.Behaviours
 	{
 		[SerializeField] private Transform _cardsHolder;
 
+		private IMinigameService _minigameService;
+
 		[Inject]
-		public void Constructor()
+		public void Constructor(IMinigameService minigameService)
 		{
 			Id = WindowId.MinigameWindow;
+
+			_minigameService = minigameService;
+		}
+
+		protected override void Initialize()
+		{
+			_minigameService.StartGame(_cardsHolder);
 		}
 	}
 }

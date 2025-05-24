@@ -29,6 +29,7 @@ namespace Code.Infrastructure.StaticData
 		{
 			await LoadWindows();
 			await LoadQuests();
+			await LoadCards();
 		}
 
 		public WindowConfig GetWindowConfig(WindowId id)
