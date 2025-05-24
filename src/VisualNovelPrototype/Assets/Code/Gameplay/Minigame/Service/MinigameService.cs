@@ -1,16 +1,23 @@
 using System.Collections.Generic;
 using System.Linq;
+using Code.Gameplay.Minigame.Behaviours;
+using Code.Gameplay.Minigame.Factory;
 using Code.Meta.UI.Windows;
 using Code.Meta.UI.Windows.Services;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Code.Gameplay.Quest
+namespace Code.Gameplay.Minigame.Service
 {
 	public class MinigameService : IMinigameService
 	{
 		private const int CardsInGame = 8;
 		private const int MatchGroupSize = 2;
+
+		private readonly CardTypeId[] _availableCardTypes =
+			((CardTypeId[])System.Enum.GetValues(typeof(CardTypeId)))
+			.Where(id => id != CardTypeId.Unknown)
+			.ToArray();
 
 		private Transform _cardsHolder;
 
@@ -29,29 +36,16 @@ namespace Code.Gameplay.Quest
 			_windowService = windowService;
 		}
 
-		public void SetCardsHolder(Transform cardsHolder)
-		{
+		public void SetCardsHolder(Transform cardsHolder) => 
 			_cardsHolder = cardsHolder;
-
-			Debug.Log(_cardsHolder);
-		}
 
 		public UniTask StartGame()
 		{
 			_gameFinishedTcs = new UniTaskCompletionSource();
 
-			_cards.Clear();
-			_selectedCards.Clear();
-
-			Debug.Log(_cardsHolder);
-
-
-			for (int i = 0; i < CardsInGame; i++)
-			{
-				CardTypeId randomCard = (CardTypeId)Random.Range(1, 5);
-				CardItem item = _cardFactory.CreateCardItem(randomCard, _cardsHolder);
-				_cards.Add(item);
-			}
+			ClearCards();
+			ClearSelectedCards();
+			CreateCards();
 
 			return _gameFinishedTcs.Task;
 		}
@@ -70,6 +64,16 @@ namespace Code.Gameplay.Quest
 				await CheckCards();
 
 				ClearSelectedCards();
+			}
+		}
+
+		private void CreateCards()
+		{
+			for (int i = 0; i < CardsInGame; i++)
+			{
+				CardTypeId randomCard = _availableCardTypes[Random.Range(0, _availableCardTypes.Length)];
+				CardItem item = _cardFactory.CreateCardItem(randomCard, _cardsHolder);
+				_cards.Add(item);
 			}
 		}
 
@@ -124,6 +128,9 @@ namespace Code.Gameplay.Quest
 			_cards
 				.GroupBy(card => card.Id)
 				.Any(g => g.Count() >= MatchGroupSize);
+
+		private void ClearCards() => 
+			_cards.Clear();
 
 		private void ClearSelectedCards() =>
 			_selectedCards.Clear();

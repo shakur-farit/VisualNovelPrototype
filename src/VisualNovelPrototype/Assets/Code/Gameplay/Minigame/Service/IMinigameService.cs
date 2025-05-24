@@ -1,7 +1,8 @@
+using Code.Gameplay.Minigame.Behaviours;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Code.Gameplay.Quest
+namespace Code.Gameplay.Minigame.Service
 {
 	public interface IMinigameService
 	{

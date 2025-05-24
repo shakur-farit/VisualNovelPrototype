@@ -47,35 +47,41 @@ MonoBehaviour:
     m_SerializedLabels:
     - WindowConfig
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 67408105bf568c940a8a2a2cc63b8b0e
-    m_Address: Assets/StaticData/Cards/BombCardConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - CardConfig
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 80a0a013c3643f94faaa54d274d5ba92
-    m_Address: Assets/StaticData/Cards/HelmetCardConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - CardConfig
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4aa412a1f986bb84a8010512193033a1
-    m_Address: Assets/StaticData/Cards/BulletCardConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - CardConfig
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 67a23185bed030b4eab9e78a0b1a862b
-    m_Address: Assets/StaticData/Cards/ShieldCardConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - CardConfig
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ada92a450223a2e4cac0b1bad976b8ab
     m_Address: Assets/StaticData/Windows/MinigameWindowConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60203bef7d534e94682789230e34cb86
+    m_Address: Assets/StaticData/Windows/InteractiveWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 814ae0564999eed438130555ad2de2c9
+    m_Address: Assets/StaticData/Cards/CardConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 03f1834d8c4d8fc49906e98c8753a396
+    m_Address: Assets/StaticData/Cards/BulletCardConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d76e3790bf1efc428b9c0b1e3761659
+    m_Address: Assets/StaticData/Cards/HelmetCardConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e117970d3fa490428dbeada71c0877c
+    m_Address: Assets/StaticData/Cards/ShieldCardConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - CardConfig
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}

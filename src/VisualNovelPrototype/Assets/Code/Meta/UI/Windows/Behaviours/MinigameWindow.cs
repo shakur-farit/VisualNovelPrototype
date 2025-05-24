@@ -1,3 +1,4 @@
+using Code.Gameplay.Minigame.Service;
 using Code.Gameplay.Quest;
 using UnityEngine;
 using Zenject;

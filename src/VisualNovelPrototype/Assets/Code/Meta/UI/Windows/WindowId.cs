@@ -8,5 +8,6 @@ namespace Code.Meta.UI.Windows
 		QuestWindow = 3,
 		Hud = 4,
 		MinigameWindow = 5,
+		InteractiveWindow = 6,
 	}
 }

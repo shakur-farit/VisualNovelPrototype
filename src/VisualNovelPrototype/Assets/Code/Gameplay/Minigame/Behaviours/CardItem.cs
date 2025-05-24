@@ -1,8 +1,10 @@
+using Code.Gameplay.Minigame.Configs;
+using Code.Gameplay.Minigame.Service;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Gameplay.Quest
+namespace Code.Gameplay.Minigame.Behaviours
 {
 	public class CardItem : MonoBehaviour
 	{
@@ -37,8 +39,6 @@ namespace Code.Gameplay.Quest
 
 		public void HideCard()
 		{
-			Debug.Log("HideCard");
-
 			_upIcon.enabled = true;
 			_insideIcon.enabled = false;
 

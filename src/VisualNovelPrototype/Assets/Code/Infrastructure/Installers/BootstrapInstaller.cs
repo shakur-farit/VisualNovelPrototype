@@ -1,4 +1,6 @@
-using Code.Gameplay.Quest;
+using Code.Gameplay.IntearctiveObject.Commands;
+using Code.Gameplay.Minigame.Factory;
+using Code.Gameplay.Minigame.Service;
 using Code.Gameplay.Quest.Factory;
 using Code.Gameplay.Quest.Service;
 using Code.Infrastructure.AssetsManagement;
@@ -60,6 +62,7 @@ namespace Code.Infrastructure.Installers
 			Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
 			Container.Bind<IQuestService>().To<QuestService>().AsSingle();
 			Container.Bind<IMinigameService>().To<MinigameService>().AsSingle();
+			Container.Bind<IInteractiveService>().To<InteractiveService>().AsSingle();
 		}
 
 		private void BindGameplayFactories()

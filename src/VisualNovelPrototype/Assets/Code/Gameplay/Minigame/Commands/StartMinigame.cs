@@ -1,10 +1,10 @@
-using System.Threading.Tasks;
-using Code.Meta.UI.Windows.Services;
+using Code.Gameplay.Minigame.Service;
 using Code.Meta.UI.Windows;
+using Code.Meta.UI.Windows.Services;
 using Naninovel;
 using Zenject;
 
-namespace Code.Gameplay.Quest
+namespace Code.Gameplay.Minigame.Commands
 {
 	public class StartMinigame : Command
 	{

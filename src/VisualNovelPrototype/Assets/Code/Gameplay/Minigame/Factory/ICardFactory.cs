@@ -1,6 +1,7 @@
+using Code.Gameplay.Minigame.Behaviours;
 using UnityEngine;
 
-namespace Code.Gameplay.Quest
+namespace Code.Gameplay.Minigame.Factory
 {
 	public interface ICardFactory
 	{

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Gameplay.Quest
+namespace Code.Gameplay.Minigame.Configs
 {
 	[CreateAssetMenu(menuName = "Novel/Card Config", fileName = "CardConfig")]
 	public class CardConfig : ScriptableObject

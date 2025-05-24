@@ -1,4 +1,4 @@
-namespace Code.Gameplay.Quest
+namespace Code.Gameplay.Minigame
 {
 	public enum CardTypeId
 	{

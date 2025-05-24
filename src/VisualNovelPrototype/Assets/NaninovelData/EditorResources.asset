@@ -98,6 +98,9 @@ MonoBehaviour:
     - name: SecondLocation
       pathPrefix: Scripts
       guid: adcda45721686e94c98a76e68381875c
+    - name: Depot
+      pathPrefix: Scripts
+      guid: 42636aaf42bf0974cac36902c8736620
   - Id: Unlockables
     Resources: []
   - Id: Backgrounds/566e1e0c-b065-4ed5-97d8-baf8c156a665
@@ -107,7 +110,10 @@ MonoBehaviour:
       guid: 6491a02d01e50e440afc413f7c0e3361
     - name: SecondLocation
       pathPrefix: Backgrounds/MainBackground
-      guid: cc23b315f775d8541aa30042704019af
+      guid: e0ec5e67615469b48b240d5ff6aa593d
+    - name: ThirdLocation
+      pathPrefix: Backgrounds/MainBackground
+      guid: 2110b08068e28244d888a1ae99ab7e5a
   - Id: Characters/52777063-d1ae-4410-a6a1-46b75496b94a
     Resources:
     - name: Default

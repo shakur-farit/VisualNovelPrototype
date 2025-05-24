@@ -1,8 +1,10 @@
+using Code.Gameplay.Minigame.Behaviours;
+using Code.Gameplay.Minigame.Configs;
 using Code.Infrastructure.StaticData;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Gameplay.Quest
+namespace Code.Gameplay.Minigame.Factory
 {
 	public class CardFactory : ICardFactory
 	{

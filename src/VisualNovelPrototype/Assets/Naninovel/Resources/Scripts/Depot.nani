@@ -1,0 +1,7 @@
+@back ThirdLocation
+
+@showHud
+
+@char Hero.Default pos:0
+
+@stop
