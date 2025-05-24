@@ -18,9 +18,7 @@ namespace Code.Meta.UI.Windows.Behaviours
 			_minigameService = minigameService;
 		}
 
-		protected override void Initialize()
-		{
-			_minigameService.StartGame(_cardsHolder);
-		}
+		protected override void OnAwake() => 
+			_minigameService.SetCardsHolder(_cardsHolder);
 	}
 }

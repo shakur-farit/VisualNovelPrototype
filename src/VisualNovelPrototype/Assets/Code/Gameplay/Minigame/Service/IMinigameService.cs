@@ -1,11 +1,12 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Code.Gameplay.Quest
 {
 	public interface IMinigameService
 	{
-		void StartGame(Transform cardParent);
+		UniTask StartGame();
 		void SelectCard(CardItem item);
-		void ShowSelectedCards();
+		void SetCardsHolder(Transform cardsHolder);
 	}
 }

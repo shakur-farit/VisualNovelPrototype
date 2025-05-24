@@ -29,6 +29,14 @@ Strill: Сыграй со мной в игру. И если ты победиш�
 Strill: А если нет. То я придумаю для тебя другое занятее. Идет?
 @hide Strill
 
+@hidePrinter
+
 @startMinigame
+
+@showPrinter
+
+@char Strill.Default pos:80
+Strill: Очень не плохо...
+@hide Strill
 
 @stop

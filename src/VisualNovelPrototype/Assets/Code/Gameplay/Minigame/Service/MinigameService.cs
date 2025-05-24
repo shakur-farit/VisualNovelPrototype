@@ -4,7 +4,6 @@ using Code.Meta.UI.Windows;
 using Code.Meta.UI.Windows.Services;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Code.Gameplay.Quest
 {
@@ -13,8 +12,12 @@ namespace Code.Gameplay.Quest
 		private const int CardsInGame = 8;
 		private const int MatchGroupSize = 2;
 
+		private Transform _cardsHolder;
+
 		private readonly List<CardItem> _cards = new();
 		private readonly List<CardItem> _selectedCards = new();
+
+		private UniTaskCompletionSource _gameFinishedTcs;
 
 		private readonly ICardFactory _cardFactory;
 		private readonly IWindowService _windowService;
@@ -26,14 +29,31 @@ namespace Code.Gameplay.Quest
 			_windowService = windowService;
 		}
 
-		public void StartGame(Transform cardParent)
+		public void SetCardsHolder(Transform cardsHolder)
 		{
+			_cardsHolder = cardsHolder;
+
+			Debug.Log(_cardsHolder);
+		}
+
+		public UniTask StartGame()
+		{
+			_gameFinishedTcs = new UniTaskCompletionSource();
+
+			_cards.Clear();
+			_selectedCards.Clear();
+
+			Debug.Log(_cardsHolder);
+
+
 			for (int i = 0; i < CardsInGame; i++)
 			{
 				CardTypeId randomCard = (CardTypeId)Random.Range(1, 5);
-				CardItem item = _cardFactory.CreateCardItem(randomCard, cardParent);
+				CardItem item = _cardFactory.CreateCardItem(randomCard, _cardsHolder);
 				_cards.Add(item);
 			}
+
+			return _gameFinishedTcs.Task;
 		}
 
 		public async void SelectCard(CardItem item)
@@ -53,7 +73,7 @@ namespace Code.Gameplay.Quest
 			}
 		}
 
-		public void ShowSelectedCards()
+		private void ShowSelectedCards()
 		{
 			foreach (CardItem selectedCard in _selectedCards) 
 				selectedCard.ShowCard();
@@ -74,19 +94,24 @@ namespace Code.Gameplay.Quest
 				card.HideCard();
 		}
 
-		private void CheckRemainingCards()
+		private async void CheckRemainingCards()
 		{
 			foreach (CardItem card in _selectedCards) 
 				_cards.Remove(card);
 
 			if (HasPossibleMatch() == false)
+			{
+				await UniTask.Delay(1000);
+
 				EndGame();
+			}
 		}
 
 		private void EndGame()
 		{
-			Debug.Log("endGame");
 			_windowService.Close(WindowId.MinigameWindow);
+
+			_gameFinishedTcs?.TrySetResult();
 		}
 
 		private bool IsAllSelectedCardSame() =>
