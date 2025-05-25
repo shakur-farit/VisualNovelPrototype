@@ -1,0 +1,21 @@
+@back SecondLocation
+
+@showHud
+
+@if deviceOwner=="alex"
+@char Strill.Default pos:80
+Strill: Зря ты не отдал устройство мне. Мы заработали на много больше чем ты получил от этого скряги.
+@hide Strill
+
+@elseif deviceOwner=="strill"
+@char Strill.Default pos:80
+Strill: Привет партнер. Я пока не нашёл покупателей. Но не волнуйся, на такую вещицу быстро найется спрос.
+@hide Strill
+
+@else
+@char Strill.Default pos:80
+Strill: Думаешь успеешь воспользоваться устройством? Очень сильно сомневаюсь.
+@hide Strill
+
+@hidePrinter
+@stop

@@ -95,6 +95,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - InteractiveObjectConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80c8ae8d1e279a14f97ac7392daa20ce
+    m_Address: Assets/StaticData/Windows/MapWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 183b803429e9c3b40baad8b4b51dd211
+    m_Address: Assets/StaticData/Windows/SettingsWindowConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - WindowConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}
   m_SchemaSet:

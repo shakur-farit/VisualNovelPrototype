@@ -1,0 +1,22 @@
+@back FirstLocation
+
+@showHud
+
+@if deviceOwner=="alex"
+@char Alex.Default pos:60 look:left
+Alex: Рад тебя видеть снова. Ищешь новую работенку?
+Alex: Пока ничем помочь не могу. Но если что я обязательно дам тебе знать.
+@hide Alex
+
+@elseif deviceOwner=="strill"
+@char Alex.Default pos:60 look:left
+Alex: Ты выбрал не ту сторону, охотник. Я запомню это.
+@hide Alex
+
+@else
+@char Alex.Default pos:60 look:left
+Alex: Ты так и не отдал устройство. Это плохо для тебя закончится.
+@hide Alex
+
+@hidePrinter
+@stop

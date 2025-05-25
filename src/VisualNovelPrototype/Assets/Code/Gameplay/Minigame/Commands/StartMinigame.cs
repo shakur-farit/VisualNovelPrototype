@@ -10,7 +10,7 @@ namespace Code.Gameplay.Minigame.Commands
 	{
 		public override async UniTask ExecuteAsync(AsyncToken asyncToken = default)
 		{
-			OpenWindow();
+			await OpenWindow();
 			await StartGame();
 		}
 

@@ -107,6 +107,12 @@ MonoBehaviour:
     - name: BackToAlex
       pathPrefix: Scripts
       guid: 7d46bae84a3ba3547881b112e862d0da
+    - name: Bar
+      pathPrefix: Scripts
+      guid: 399f32b01c904464eb19ad419c6da0f8
+    - name: Street
+      pathPrefix: Scripts
+      guid: becd851825e21734cb4c8ccd547059f1
   - Id: Unlockables
     Resources: []
   - Id: Backgrounds/566e1e0c-b065-4ed5-97d8-baf8c156a665

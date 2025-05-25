@@ -9,5 +9,7 @@ namespace Code.Meta.UI.Windows
 		Hud = 4,
 		MinigameWindow = 5,
 		InteractiveWindow = 6,
+		MapWindow = 7,
+		SettingsWindow = 8
 	}
 }

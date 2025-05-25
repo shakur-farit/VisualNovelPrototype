@@ -40,7 +40,7 @@ Alex: Отлично. Буду ждать тебя здесь.
 @hide Alex
 
 @hideHud
-@hidePrint
+@hidePrinter
 
 @wait 1
 

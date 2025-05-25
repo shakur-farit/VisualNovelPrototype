@@ -80,12 +80,15 @@ namespace Code.Infrastructure.Installers
 		private void BindUIServices()
 		{
 			Container.Bind<IWindowService>().To<WindowService>().AsSingle();
+			Container.Bind<IMapPointActivator>().To<MapPointActivator>().AsSingle();
 		}
 
 
 		private void BindInfrastructureServices()
 		{
 			Container.BindInterfacesTo<BootstrapInstaller>().FromInstance(this).AsSingle();
+			Container.Bind<IScenarioSwitcher>().To<ScenarioSwitcher>().AsSingle();
+
 		}
 
 		private void BindAssetManagementServices()
