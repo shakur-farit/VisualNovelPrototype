@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Code.Gameplay.IntearctiveObject.Commands;
 using Code.Gameplay.Minigame;
 using Code.Gameplay.Minigame.Configs;
 using Code.Gameplay.Quest;
@@ -17,11 +18,13 @@ namespace Code.Infrastructure.StaticData
 		private const string WindowConfigLabel = "WindowConfig";
 		private const string QuestConfigLabel = "QuestConfig";
 		private const string CardConfigLabel = "CardConfig";
+		private const string InteractiveObjectConfigLabel = "InteractiveObjectConfig";
 		
 		private Dictionary<WindowId, WindowConfig> _windowById;
 		private Dictionary<QuestTypeId, QuestConfig> _questById;
 		private Dictionary<CardTypeId, CardConfig> _cardById;
-		
+		private Dictionary<InteractiveObjectTypeId, InteractiveObjectConfig> _interactiveObjectById;
+
 		private readonly IAssetProvider _assetProvider;
 
 		public StaticDataService(IAssetProvider assetProvider) =>
@@ -32,6 +35,7 @@ namespace Code.Infrastructure.StaticData
 			await LoadWindows();
 			await LoadQuests();
 			await LoadCards();
+			await LoadInteractiveObjects();
 		}
 
 		public WindowConfig GetWindowConfig(WindowId id)
@@ -58,6 +62,14 @@ namespace Code.Infrastructure.StaticData
 			throw new Exception($"Card config for {id} was not found");
 		}
 
+		public InteractiveObjectConfig GetInteractiveObjectConfig(InteractiveObjectTypeId id)
+		{
+			if (_interactiveObjectById.TryGetValue(id, out InteractiveObjectConfig config))
+				return config;
+
+			throw new Exception($"Interactive object config for {id} was not found");
+		}
+
 		private async UniTask LoadWindows() =>
 			_windowById = (await _assetProvider.LoadAll<WindowConfig>(WindowConfigLabel))
 				.ToDictionary(x => x.TypeId, x => x);
@@ -69,5 +81,10 @@ namespace Code.Infrastructure.StaticData
 		private async UniTask LoadCards() =>
 			_cardById = (await _assetProvider.LoadAll<CardConfig>(CardConfigLabel))
 				.ToDictionary(x => x.TypeId, x => x);
+
+		private async UniTask LoadInteractiveObjects() =>
+			_interactiveObjectById = (await _assetProvider.LoadAll<InteractiveObjectConfig>(InteractiveObjectConfigLabel))
+				.ToDictionary(x => x.TypeId, x => x);
+
 	}
 }

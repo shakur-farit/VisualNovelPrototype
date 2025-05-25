@@ -3,5 +3,19 @@
 @showHud
 
 @char Hero.Default pos:0
+Hero: Отлично... Где тут наш сейф... Вот ты где... 
+@hide Hero
+
+@char Hero.Default pos:0
+Hero: Раз два и готово. А шума то столько развели.
+Hero: А утройство то и вправду интересное
+@hide Hero
+
+@hidePrinter
+@hideHud
+
+@wait 1
+
+@goTo BackToStreet
 
 @stop

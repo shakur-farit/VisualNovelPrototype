@@ -83,6 +83,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - CardConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0083ad0c7f71b1a419a144150d8688e5
+    m_Address: Assets/StaticData/InteractiveObjects/KeyInteractiveObjectConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InteractiveObjectConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa984679253e10949b8b644695983bf1
+    m_Address: Assets/StaticData/InteractiveObjects/DoorInteractiveObjectConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InteractiveObjectConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}
   m_SchemaSet:

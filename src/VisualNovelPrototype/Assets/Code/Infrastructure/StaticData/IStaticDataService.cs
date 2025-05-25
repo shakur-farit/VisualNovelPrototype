@@ -1,3 +1,4 @@
+using Code.Gameplay.IntearctiveObject.Commands;
 using Code.Gameplay.Minigame;
 using Code.Gameplay.Minigame.Configs;
 using Code.Gameplay.Quest;
@@ -14,5 +15,6 @@ namespace Code.Infrastructure.StaticData
 		WindowConfig GetWindowConfig(WindowId id);
 		QuestConfig GetQuestConfig(QuestTypeId id);
 		CardConfig GetCardConfig(CardTypeId id);
+		InteractiveObjectConfig GetInteractiveObjectConfig(InteractiveObjectTypeId id);
 	}
 }

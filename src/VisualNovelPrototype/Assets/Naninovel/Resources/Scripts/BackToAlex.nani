@@ -1,0 +1,61 @@
+@back FirstLocation
+
+@showHud
+
+@char Alex.Default pos:60 look:left
+Alex: Ну наконец то. Я уж думал тебя сцапали. Принес?
+@hide Alex
+
+@char Hero.Default pos:0
+Hero: Не задавай глупых вопросов. Конечно!
+@hide Hero
+
+@char Alex.Default pos:60 look:left
+Alex: Давай сюда.
+@hide Alex
+
+@char Strill.Default pos:80
+Strill: Или ты можешь отдать устройство мне и мы разрулим всё как и договривались.
+@hide Strill
+
+@char Alex.Default pos:60 look:left
+Alex: Стрилл ты скотина.
+@hide Alex
+
+@choice "Что делать с устройством?"
+"Отдать Алексу." -> alexPath
+"Отдать Стриллу." -> strillPath
+"Оставить себе." -> heroPath
+
+#alexPath
+@char Alex.Default pos:60 look:left
+Alex: Спасибо. Слухи о тебе не врали. Ты и вправду человек дела. Держи. Вот твоя награда.
+@hide Alex
+
+@char Strill.Default pos:80
+Strill: И вот на эти гроши ты променял такую ценную вещь?! Я был лучшего мнения о тебе.
+@hide Strill
+
+#strillPath
+@char Strill.Default pos:80
+Strill: Верное решение партнер. Я знал что ты умный человек.
+@hide Strill
+
+@char Alex.Default pos:60 look:left
+Alex: Я это так не оставлю. Теперь ходите оглядываясь.
+@hide Alex
+
+#heroPath
+@char Hero.Default pos:0
+Hero: А знаете что?! Оставлю ка я это устройство себе. Оно выглядит очень уж интересным.
+@hide Hero
+
+@char Alex.Default pos:60 look:left
+Alex: Ах ты ж... Я знал что охотникам нельзя доверять. У вас нет чести. Я этого так не оставлю
+@hide Alex
+
+@char Strill.Default pos:80
+Strill: Глупец. Советую теперь оглядываться по сторонам.
+@hide Strill
+
+@stop

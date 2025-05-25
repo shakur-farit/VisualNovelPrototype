@@ -62,13 +62,13 @@ namespace Code.Infrastructure.Installers
 			Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
 			Container.Bind<IQuestService>().To<QuestService>().AsSingle();
 			Container.Bind<IMinigameService>().To<MinigameService>().AsSingle();
-			Container.Bind<IInteractiveService>().To<InteractiveService>().AsSingle();
 		}
 
 		private void BindGameplayFactories()
 		{
 			Container.Bind<IQuestItemFactory>().To<QuestItemFactory>().AsSingle();
 			Container.Bind<ICardFactory>().To<CardFactory>().AsSingle();
+			Container.Bind<IInteractiveObjectFactory>().To<InteractiveObjectFactory>().AsSingle();
 		}
 
 

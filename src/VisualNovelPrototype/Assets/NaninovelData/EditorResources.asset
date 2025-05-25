@@ -101,6 +101,12 @@ MonoBehaviour:
     - name: Depot
       pathPrefix: Scripts
       guid: 42636aaf42bf0974cac36902c8736620
+    - name: BackToStreet
+      pathPrefix: Scripts
+      guid: 7d44027848b340445b65ca4b1cad3069
+    - name: BackToAlex
+      pathPrefix: Scripts
+      guid: 7d46bae84a3ba3547881b112e862d0da
   - Id: Unlockables
     Resources: []
   - Id: Backgrounds/566e1e0c-b065-4ed5-97d8-baf8c156a665
