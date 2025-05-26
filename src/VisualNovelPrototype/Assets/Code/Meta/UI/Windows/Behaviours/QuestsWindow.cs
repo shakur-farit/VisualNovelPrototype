@@ -14,10 +14,11 @@ namespace Code.Meta.UI.Windows.Behaviours
 	public class QuestsWindow : BaseWindow
 	{
 		[SerializeField] private Transform _questItemsHolder;
+		[SerializeField] private Transform _questLevelItemsHolder;
 		[SerializeField] private TextMeshProUGUI _questDescriptionText;
 		[SerializeField] private Button _closeButton;
 
-		private List<QuestItem> _questItems = new();
+		private readonly List<QuestItem> _questItems = new();
 
 		private IQuestService _questService;
 		private IQuestItemFactory _questItemFactory;
@@ -49,7 +50,14 @@ namespace Code.Meta.UI.Windows.Behaviours
 
 			foreach (QuestTypeId questTypeId in _questService.Quests.Keys)
 			{
-				QuestItem item = _questItemFactory.CreateQuestItem(questTypeId, _questItemsHolder, UpdateDescriptionText);
+				QuestItem item = 
+					_questItemFactory
+						.CreateQuestItem(
+							questTypeId,
+							_questItemsHolder, 
+							UpdateDescriptionText, 
+							_questService.Quests[questTypeId], 
+							_questLevelItemsHolder);
 				_questItems.Add(item);
 			}
 		}

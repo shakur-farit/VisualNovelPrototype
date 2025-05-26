@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Code.Gameplay.Quest.Commands
 {
-	public class RemoveQuest : Command
+	public class UpdateQuest : Command
 	{
 		[ParameterAlias("id")]
 		public StringParameter QuestId;
@@ -19,7 +19,7 @@ namespace Code.Gameplay.Quest.Commands
 			IQuestService questService = container.Resolve<IQuestService>();
 
 			if (Enum.TryParse<QuestTypeId>(QuestId, ignoreCase: true, out var questType))
-				questService.RemoveQuest(questType);
+				questService.UpdateQuest(questType);
 			else
 				Debug.LogWarning($"QuestAdd: Invalid QuestId '{QuestId}'");
 

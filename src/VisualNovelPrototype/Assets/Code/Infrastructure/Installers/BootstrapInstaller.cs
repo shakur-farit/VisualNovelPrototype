@@ -67,6 +67,7 @@ namespace Code.Infrastructure.Installers
 		private void BindGameplayFactories()
 		{
 			Container.Bind<IQuestItemFactory>().To<QuestItemFactory>().AsSingle();
+			Container.Bind<IQuestLevelItemFactory>().To<QuestLevelItemFactory>().AsSingle();
 			Container.Bind<ICardFactory>().To<CardFactory>().AsSingle();
 			Container.Bind<IInteractiveObjectFactory>().To<InteractiveObjectFactory>().AsSingle();
 		}

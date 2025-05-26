@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
 using Code.Gameplay.Quest.Configs;
+using Code.Gameplay.Quest.Factory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Code.Gameplay.Quest.Behaviours
 {
@@ -11,22 +14,47 @@ namespace Code.Gameplay.Quest.Behaviours
 		[SerializeField] private TextMeshProUGUI _title;
 		[SerializeField] private Button _selectButton;
 
-		private QuestStatus _status;
+		private bool _levelsInstantiated = false;
 		private Action<string> _onSelected;
 
-		public void Setup(QuestConfig config, Action<string> action)
+		private IQuestLevelItemFactory _factory;
+
+		[Inject]
+		public void Constructor(IQuestLevelItemFactory factory) => 
+			_factory = factory;
+
+		public void Setup(QuestConfig config, Action<string> action, List<QuestLevel> levels, Transform levelParent)
 		{
-			_status = config.Status;
-			_title.text = config.QuestName;
+			_title.text = config.Id.ToString();
 			_onSelected = action;
 
-			//BindEvents(config.Description);
+			_selectButton.onClick.RemoveAllListeners();
+			_selectButton.onClick.AddListener(() => OnClicked(levels, levelParent));
+			_selectButton.onClick.AddListener(() => BindEvents(levels));
 		}
 
-		private void BindEvents(string description)
+		private void OnClicked(List<QuestLevel> levels, Transform levelParent)
 		{
-			_selectButton.onClick.RemoveAllListeners();
-			_selectButton.onClick.AddListener(() => _onSelected?.Invoke(description));
+			if (_levelsInstantiated)
+				return;
+
+			foreach (QuestLevel level in levels)
+			{
+				if (level.levelStatus == QuestLevelStatus.Active ||
+				    level.levelStatus == QuestLevelStatus.Completed)
+				{
+					_factory.CreateQuestLevelItem(level, levelParent);
+				}
+			}
+
+			_levelsInstantiated = true;
+		}
+
+		private void BindEvents(List<QuestLevel> levels)
+		{
+			foreach (QuestLevel level in levels)
+				if (level.levelStatus == QuestLevelStatus.Active)
+					_selectButton.onClick.AddListener(() => _onSelected?.Invoke(level.Description));
 		}
 	}
 }

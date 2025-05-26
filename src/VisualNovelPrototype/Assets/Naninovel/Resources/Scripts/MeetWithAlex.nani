@@ -2,11 +2,15 @@
 
 @showHud
 
+@addQuest id:ReturnTheLostItem
+
 @char Hero.Default pos:0
 Hero: Очередная дыра.
 Hero: Хотя... Тут не так уж и дурно. Покрайней мере по сравнению с тем что было в предыдущем городе.
 Hero: Посмотрим как тут можно подзаработать.
 @hide Hero
+
+@updateQuest id:ReturnTheLostItem
 
 @char Alex.Default pos:60 look:left
 Alex: Вот это да. Это же {playerName} собственной персоной. Слава о тебе разнеслась далеко за пределы твоего родного городка.
@@ -33,7 +37,6 @@ Alex: У него есть вещица... МОЯ вещица. Я хочу чт
 Hero: Не вопрос.
 @hide Hero
 
-@addQuest id:VisitStrill
 
 @char Alex.Default pos:60 look:left
 Alex: Отлично. Буду ждать тебя здесь.
