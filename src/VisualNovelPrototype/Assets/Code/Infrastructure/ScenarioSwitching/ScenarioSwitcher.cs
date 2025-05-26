@@ -26,6 +26,7 @@ namespace Code.Meta.UI.Windows.Services
 			_isTransitioning = true;
 
 			_scriptPlayer.Stop();
+			await UniTask.Yield();
 
 			await _scriptPlayer.PreloadAndPlayAsync(scriptName);
 

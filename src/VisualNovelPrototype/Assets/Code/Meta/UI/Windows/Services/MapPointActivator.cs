@@ -10,5 +10,11 @@ namespace Code.Meta.UI.Windows.Services
 
 		public void ActiveSecondLocation() =>
 			IsSecondLocationActive = true;
+
+		public void DeactiveFirstLocation() =>
+			IsFirstLocationActive = false;
+
+		public void DeactiveSecondLocation() =>
+			IsSecondLocationActive = false;
 	}
 }

@@ -15,8 +15,6 @@ namespace Code.Meta.UI.Windows.Behaviours
 		[SerializeField] private Button _secondLocationButton;
 		[SerializeField] private Button _closeButton;
 
-		private IScriptPlayer _scriptPlayer;
-
 		private IWindowService _windowService;
 		private IMapPointActivator _activator;
 		private IScenarioSwitcher _scenarioSwitcher;
@@ -36,8 +34,6 @@ namespace Code.Meta.UI.Windows.Behaviours
 		{
 			_firstLocationButton.interactable = _activator.IsFirstLocationActive;
 			_secondLocationButton.interactable = _activator.IsSecondLocationActive;
-
-			_scriptPlayer = Engine.GetService<IScriptPlayer>();
 
 			_firstLocationButton.onClick.AddListener(()=>StartScenario(Bar));
 			_secondLocationButton.onClick.AddListener(() => StartScenario(Street));

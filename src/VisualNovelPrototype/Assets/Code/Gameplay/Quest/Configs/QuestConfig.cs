@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Code.Gameplay.Quest.Configs
@@ -7,8 +9,15 @@ namespace Code.Gameplay.Quest.Configs
 	{
 		public QuestTypeId Id;
 		public QuestStatus Status;
+		public string QuestName;
+		public GameObject PrefabView;
+		public List<QuestLevel> Levels;
+	}
+
+	[Serializable]
+	public class QuestLevel
+	{
 		public string Title;
 		public string Description;
-		public GameObject PrefabView;
 	}
 }

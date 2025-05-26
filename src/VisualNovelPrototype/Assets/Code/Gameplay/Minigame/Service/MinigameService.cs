@@ -6,6 +6,7 @@ using Code.Meta.UI.Windows;
 using Code.Meta.UI.Windows.Services;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Code.Gameplay.Minigame.Service
 {
@@ -36,7 +37,7 @@ namespace Code.Gameplay.Minigame.Service
 			_windowService = windowService;
 		}
 
-		public void SetCardsHolder(Transform cardsHolder) => 
+		public void SetCardsHolder(Transform cardsHolder) =>
 			_cardsHolder = cardsHolder;
 
 		public UniTask StartGame()
@@ -50,14 +51,19 @@ namespace Code.Gameplay.Minigame.Service
 			return _gameFinishedTcs.Task;
 		}
 
-		public async void SelectCard(CardItem item)
+		public async void SelectCard(CardItem item, Image selectedIcon)
 		{
 			if (_selectedCards.Contains(item))
 				return;
 
 			_selectedCards.Add(item);
+			
+			if(_selectedCards.Count > MatchGroupSize)
+				return;
+			
+			selectedIcon.enabled = true;
 
-			if (_selectedCards.Count >= MatchGroupSize)
+			if (_selectedCards.Count == MatchGroupSize)
 			{
 				ShowSelectedCards();
 
@@ -79,7 +85,7 @@ namespace Code.Gameplay.Minigame.Service
 
 		private void ShowSelectedCards()
 		{
-			foreach (CardItem selectedCard in _selectedCards) 
+			foreach (CardItem selectedCard in _selectedCards)
 				selectedCard.ShowCard();
 		}
 
@@ -100,7 +106,7 @@ namespace Code.Gameplay.Minigame.Service
 
 		private async void CheckRemainingCards()
 		{
-			foreach (CardItem card in _selectedCards) 
+			foreach (CardItem card in _selectedCards)
 				_cards.Remove(card);
 
 			if (HasPossibleMatch() == false)
@@ -129,7 +135,7 @@ namespace Code.Gameplay.Minigame.Service
 				.GroupBy(card => card.Id)
 				.Any(g => g.Count() >= MatchGroupSize);
 
-		private void ClearCards() => 
+		private void ClearCards() =>
 			_cards.Clear();
 
 		private void ClearSelectedCards() =>

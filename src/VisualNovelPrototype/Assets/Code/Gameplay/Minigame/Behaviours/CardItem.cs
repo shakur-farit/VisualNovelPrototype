@@ -51,12 +51,8 @@ namespace Code.Gameplay.Minigame.Behaviours
 			_insideIcon.enabled = true;
 		}
 
-		private void SelectCard()
-		{
-			_selectedIcon.enabled = true;
-
-			_minigameService.SelectCard(this);
-		}
+		private void SelectCard() => 
+			_minigameService.SelectCard(this, _selectedIcon);
 
 		private void UnselectCard() => 
 			_selectedIcon.enabled = false;

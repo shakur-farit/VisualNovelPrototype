@@ -6,5 +6,7 @@ namespace Code.Meta.UI.Windows.Services
 		bool IsSecondLocationActive { get; }
 		void ActiveFirstLocation();
 		void ActiveSecondLocation();
+		void DeactiveFirstLocation();
+		void DeactiveSecondLocation();
 	}
 }

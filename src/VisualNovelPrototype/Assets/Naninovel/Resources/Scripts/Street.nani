@@ -1,5 +1,5 @@
 @back SecondLocation
-
+@deactivateMapPoints
 @showHud
 
 @if deviceOwner=="alex"
@@ -16,6 +16,8 @@ Strill: Привет партнер. Я пока не нашёл покупат�
 @char Strill.Default pos:80
 Strill: Думаешь успеешь воспользоваться устройством? Очень сильно сомневаюсь.
 @hide Strill
+@endif
 
 @hidePrinter
+@activateMapPoints
 @stop

@@ -22,9 +22,7 @@ namespace Code.Gameplay.IntearctiveObject.Commands
 
 		public InteractiveObjectItem CreateInteractiveObject(InteractiveObjectTypeId typeId)
 		{
-			var config = _staticDataService.GetInteractiveObjectConfig(typeId);
-
-			Debug.Log(config.ViewPrefab);
+			InteractiveObjectConfig config = _staticDataService.GetInteractiveObjectConfig(typeId);
 
 			InteractiveObjectItem interactiveObject = _instantiator.InstantiatePrefabForComponent<InteractiveObjectItem>(config.ViewPrefab, _holder);
 

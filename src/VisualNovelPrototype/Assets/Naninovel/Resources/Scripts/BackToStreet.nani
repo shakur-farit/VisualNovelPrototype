@@ -1,16 +1,11 @@
 @back SecondLocation
 
-@showHud
-
 @char Hero.Default pos:0
 Hero: Куда слинял этот тип?!
 Hero: Неужели он думал что я буду возиться с этим сейфом? Шутник...
 @hide Hero
 
 @hidePrinter
-@hideHud
-
-@wait 1
 
 @goTo BackToAlex
 

@@ -39,10 +39,7 @@ Hero: Не вопрос.
 Alex: Отлично. Буду ждать тебя здесь.
 @hide Alex
 
-@hideHud
 @hidePrinter
-
-@wait 1
 
 @goto MeetWithStrill
 @stop

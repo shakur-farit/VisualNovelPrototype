@@ -1,5 +1,7 @@
 @back FirstLocation
 
+@deactivateMapPoints
+
 @showHud
 
 @if deviceOwner=="alex"
@@ -17,6 +19,8 @@ Alex: Ты выбрал не ту сторону, охотник. Я запом�
 @char Alex.Default pos:60 look:left
 Alex: Ты так и не отдал устройство. Это плохо для тебя закончится.
 @hide Alex
+@endif
 
 @hidePrinter
+@activateMapPoints
 @stop

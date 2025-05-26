@@ -17,10 +17,10 @@ namespace Code.Gameplay.Quest.Behaviours
 		public void Setup(QuestConfig config, Action<string> action)
 		{
 			_status = config.Status;
-			_title.text = config.Title;
+			_title.text = config.QuestName;
 			_onSelected = action;
 
-			BindEvents(config.Description);
+			//BindEvents(config.Description);
 		}
 
 		private void BindEvents(string description)

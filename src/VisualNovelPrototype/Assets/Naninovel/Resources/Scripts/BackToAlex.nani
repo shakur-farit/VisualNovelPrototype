@@ -1,7 +1,5 @@
 @back FirstLocation
 
-@showHud
-
 @char Alex.Default pos:60 look:left
 Alex: Ну наконец то. Я уж думал тебя сцапали. Принес?
 @hide Alex
@@ -22,8 +20,6 @@ Strill: Или ты можешь отдать устройство мне и м�
 Alex: Стрилл ты скотина.
 @hide Alex
 
-
-@print "Что делать с устройством?"
 @choice "Отдать Алексу." set:deviceOwner="alex" goto:.alexPath
 @choice "Отдать Стриллу." set:deviceOwner="strill" goto:.strillPath
 @choice "Оставить себе." set:deviceOwner="hero" goto:.heroPath

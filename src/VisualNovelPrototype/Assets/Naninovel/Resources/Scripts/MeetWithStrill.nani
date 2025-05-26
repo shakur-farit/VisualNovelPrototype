@@ -1,7 +1,5 @@
 @back SecondLocation
 
-@showHud
-
 @char Hero.Default pos:0
 Hero: Хей. Ты Стрилл?
 @hide Hero
@@ -60,8 +58,6 @@ Hero: Ну посмотрим...
 @openInteractiveWindow
 @createKey
 @createDoor
-
-@hideHud
 
 @goTo Depot
 
