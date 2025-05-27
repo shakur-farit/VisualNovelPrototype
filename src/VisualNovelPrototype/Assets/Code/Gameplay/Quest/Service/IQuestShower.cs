@@ -7,5 +7,6 @@ namespace Code.Gameplay.Quest.Service
 		void SetHolders(Transform questItemsHolder, Transform questLevelItemsHolder);
 		void ShowQuests();
 		void ShowQuestLevels(QuestTypeId id);
+		void ResetShowedQuest();
 	}
 }

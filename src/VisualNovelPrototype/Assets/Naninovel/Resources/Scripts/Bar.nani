@@ -1,4 +1,6 @@
 @back FirstLocation
+@stopBgm street
+
 @bgm bar volume:0.2
 @deactivateMapPoints
 
@@ -23,5 +25,4 @@ Alex: You still haven’t handed over the device. That’s gonna end badly for y
 
 @hidePrinter
 @activateMapPoints
-@stopBgm bar
 @stop

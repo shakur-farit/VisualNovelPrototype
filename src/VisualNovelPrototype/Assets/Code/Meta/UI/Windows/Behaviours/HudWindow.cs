@@ -1,3 +1,4 @@
+using Code.Gameplay.Quest;
 using Code.Meta.UI.Windows.Services;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,13 +13,15 @@ namespace Code.Meta.UI.Windows.Behaviours
 		[SerializeField] private Button _mapButton;
 
 		private IWindowService _windowService;
+		private ISoundEffectFactory _soundEffectFactory;
 
 		[Inject]
-		public void Constructor(IWindowService windowService)
+		public void Constructor(IWindowService windowService, ISoundEffectFactory soundEffectFactory)
 		{
 			Id = WindowId.Hud;
 
 			_windowService = windowService;
+			_soundEffectFactory = soundEffectFactory;
 		}
 
 		protected override void Initialize()
@@ -28,13 +31,22 @@ namespace Code.Meta.UI.Windows.Behaviours
 			_mapButton.onClick.AddListener(OpenMapWindow);
 		}
 
-		private void OpenQuestWindow() =>
+		private void OpenQuestWindow()
+		{
 			_windowService.Open(WindowId.QuestWindow);
+			_soundEffectFactory.CreateSoundEffect(SoundEffectTypeId.Click);
+		}
 
-		private void OpenSettingsWindow() => 
+		private void OpenSettingsWindow()
+		{
 			_windowService.Open(WindowId.SettingsWindow);
+			_soundEffectFactory.CreateSoundEffect(SoundEffectTypeId.Click);
+		}
 
-		private void OpenMapWindow() => 
+		private void OpenMapWindow()
+		{
 			_windowService.Open(WindowId.MapWindow);
+			_soundEffectFactory.CreateSoundEffect(SoundEffectTypeId.Click);
+		}
 	}
 }

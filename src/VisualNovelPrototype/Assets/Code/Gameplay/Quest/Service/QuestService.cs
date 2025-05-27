@@ -12,6 +12,8 @@ namespace Code.Gameplay.Quest.Service
 {
 	public class QuestService : IQuestUpdater, IQuestShower, IQuestDescriptionUpdater
 	{
+		public const int FirstQuest = 0;
+
 		public event Action<string> OnActiveLevelSelected;
 
 		private readonly Dictionary<QuestTypeId, List<QuestLevel>> _quests = new();
@@ -19,12 +21,11 @@ namespace Code.Gameplay.Quest.Service
 
 		private Transform _questItemHolder;
 		private Transform _questLevelItemHolder;
+		private QuestTypeId _showedQuest;
 
 		private readonly IStaticDataService _staticDataService;
 		private readonly IQuestItemFactory _questItemFactory;
 		private readonly IQuestLevelItemFactory _questLevelItemFactory;
-
-		public Dictionary<QuestTypeId, List<QuestLevel>> Quests => _quests;
 
 		public QuestService(
 			IStaticDataService staticDataService,
@@ -59,13 +60,26 @@ namespace Code.Gameplay.Quest.Service
 
 		public void ShowQuests()
 		{
-			foreach (QuestTypeId id in _quests.Keys) 
+			var quests = new List<QuestTypeId>();
+
+			foreach (QuestTypeId id in _quests.Keys)
+			{
 				_questItemFactory.CreateQuestItem(id, _questItemHolder);
+				quests.Add(id);
+				;
+			}
+
+			if (quests.Count > 0)
+				ShowQuestLevels(quests[FirstQuest]);
 		}
 
 		public void ShowQuestLevels(QuestTypeId id)
 		{
+			if(_showedQuest == id)
+				return;
+
 			ClearQuestLevelsList();
+
 
 			if (_quests.TryGetValue(id, out List<QuestLevel> levels) == false)
 				return;
@@ -79,8 +93,11 @@ namespace Code.Gameplay.Quest.Service
 					.Select(l => _questLevelItemFactory.CreateQuestLevelItem(l, _questLevelItemHolder)));
 
 			QuestLevel activeLevel = shownLevels.FirstOrDefault(l => l.levelStatus == QuestLevelStatus.Active);
+
 			if (activeLevel != null)
 				InvokeOnSelected(activeLevel.Description);
+
+			_showedQuest = id;
 		}
 
 		public void SetHolders(Transform questItemsHolder, Transform questLevelItemsHolder)
@@ -89,9 +106,12 @@ namespace Code.Gameplay.Quest.Service
 			_questLevelItemHolder = questLevelItemsHolder;
 		}
 
+		public void ResetShowedQuest() => 
+			_showedQuest = QuestTypeId.Unknown;
+
 		private void AddQuest(QuestTypeId id)
 		{
-			if(_quests.ContainsKey(id))
+			if (_quests.ContainsKey(id))
 				return;
 
 			List<QuestLevel> levels = GetConfig(id).Levels
@@ -117,10 +137,10 @@ namespace Code.Gameplay.Quest.Service
 			return null;
 		}
 
-		private void CompleteQuest(QuestTypeId id) => 
+		private void CompleteQuest(QuestTypeId id) =>
 			_quests.Remove(id);
 
-		private QuestConfig GetConfig(QuestTypeId id) => 
+		private QuestConfig GetConfig(QuestTypeId id) =>
 			_staticDataService.GetQuestConfig(id);
 
 		public void ClearQuestLevelsList()
@@ -132,7 +152,7 @@ namespace Code.Gameplay.Quest.Service
 			_questLevelItems.Clear();
 		}
 
-		private void InvokeOnSelected(string description) => 
+		private void InvokeOnSelected(string description) =>
 			OnActiveLevelSelected?.Invoke(description);
 	}
 }

@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Naninovel
+  m_EditorClassIdentifier: 
+  m_GroupName: Naninovel
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 152219e0c9715e94a865c21a83bbc0dd
+  m_SerializeEntries:
+  - m_GUID: 8423861b3e53a0a4187734666ec83423
+    m_Address: Naninovel/Audio/street
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02768be9eee28b24f90c9fc1ef06344e
+    m_Address: Naninovel/Audio/fan
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4572e76c088c7b940a866bc5410dfa1f
+    m_Address: Naninovel/Audio/bar
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3462cf2f2e63ab94e9474d499b5311d0
+    m_Address: Naninovel/Characters/Strill/Default
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72bc19b126a0dee45ad554aa32afbc5a
+    m_Address: Naninovel/Characters/Hero/Default
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 232c5aeb90c9ed24fbd70d839c3f5841
+    m_Address: Naninovel/Characters/Alex/Default
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2110b08068e28244d888a1ae99ab7e5a
+    m_Address: Naninovel/Backgrounds/MainBackground/ThirdLocation
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0ec5e67615469b48b240d5ff6aa593d
+    m_Address: Naninovel/Backgrounds/MainBackground/SecondLocation
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6491a02d01e50e440afc413f7c0e3361
+    m_Address: Naninovel/Backgrounds/MainBackground/FirstLocation
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: becd851825e21734cb4c8ccd547059f1
+    m_Address: Naninovel/Scripts/Street
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 399f32b01c904464eb19ad419c6da0f8
+    m_Address: Naninovel/Scripts/Bar
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d46bae84a3ba3547881b112e862d0da
+    m_Address: Naninovel/Scripts/BackToAlex
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d44027848b340445b65ca4b1cad3069
+    m_Address: Naninovel/Scripts/BackToStreet
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42636aaf42bf0974cac36902c8736620
+    m_Address: Naninovel/Scripts/Depot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: adcda45721686e94c98a76e68381875c
+    m_Address: Naninovel/Scripts/SecondLocation
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7624843d6733e4438d31b9d31c1309a
+    m_Address: Naninovel/Scripts/FirstLocation
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e466d9326b30a4b49a3dad428b4d9968
+    m_Address: Naninovel/Spawn/Blur
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4bf810b9b6cc9f44a58fd670678ded4
+    m_Address: Naninovel/Spawn/SunShafts
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f4e71cb27fffa04486737d2cf8d622d
+    m_Address: Naninovel/Spawn/Snow
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2795040988e866646801c80024c50be1
+    m_Address: Naninovel/Spawn/ShakePrinter
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1224d69e1592d624cbde93d0f7383d91
+    m_Address: Naninovel/Spawn/ShakeCharacter
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c5b86cf3cfbb1f44ae5641699077da4
+    m_Address: Naninovel/Spawn/ShakeCamera
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f56c556ba32fd54fae62347c25a8145
+    m_Address: Naninovel/Spawn/ShakeBackground
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9117e2fa90704d45b3e1461596c11ee
+    m_Address: Naninovel/Spawn/Rain
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be75a73ecccb90b4caa5c14edb9ac467
+    m_Address: Naninovel/Spawn/DigitalGlitch
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea76638b26a915946b62907dd1e776fd
+    m_Address: Naninovel/Spawn/DepthOfField
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bf06fa813bb9c34daf521998fa72ab1
+    m_Address: Naninovel/Spawn/Animate
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e61df696cabbea448510879ee732b00
+    m_Address: Naninovel/ChoiceHandlers/ChatReply
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4fa6d62f894ae6e4698bfa8af59e7942
+    m_Address: Naninovel/ChoiceHandlers/ButtonArea
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f6aa29000e839c409e6a9c0704adc96
+    m_Address: Naninovel/ChoiceHandlers/ButtonList
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b47d9659b2be5ee4e95a776f213c9d4b
+    m_Address: Naninovel/TextPrinters/Bubble
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f9836a3c4f777741b1962979d97e485
+    m_Address: Naninovel/TextPrinters/Chat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 781828b806deb1e4cbf50ef9de41da10
+    m_Address: Naninovel/TextPrinters/Wide
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c87cebd3f0d4f174789cd351ce9591c4
+    m_Address: Naninovel/TextPrinters/Fullscreen
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bc08ccd31adff6439e97161aa6e1d8b
+    m_Address: Naninovel/TextPrinters/Dialogue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Naninovel
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e9d5e34334776f44cab81f7f211e6eaf, type: 2}
+    - {fileID: 11400000, guid: 72825dabb6444f147819b3c21666cb13, type: 2}

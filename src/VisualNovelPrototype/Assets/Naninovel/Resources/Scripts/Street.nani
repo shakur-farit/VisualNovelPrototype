@@ -1,4 +1,6 @@
 @back SecondLocation
+@stopBgm bar
+
 @bgm street volume:0.5
 @deactivateMapPoints
 @showHud
@@ -21,5 +23,4 @@ Strill: Think you’ll get to use that device? I highly doubt it.
 
 @hidePrinter
 @activateMapPoints
-@stopBgm street
 @stop

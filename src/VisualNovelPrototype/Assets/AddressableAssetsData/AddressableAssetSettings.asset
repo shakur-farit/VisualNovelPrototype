@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 42c38d6ff02352f45aa95f80a7a9c67f
   m_currentHash:
     serializedVersion: 2
-    Hash: 777e184e8932a808915bb87d32fdba2a
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: b6b669e0ffc14c34eb11e420ea05af9f, type: 2}
   - {fileID: 11400000, guid: 193afdffcc337de4e9e9ae772621e5d2, type: 2}
+  - {fileID: 11400000, guid: ace191e45dc752d4996bf12951ccbdcd, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -92,6 +93,7 @@ MonoBehaviour:
     - CardConfig
     - InteractiveObjectConfig
     - SoundEffectConfig
+    - Naninovel
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 6cd64ca4f36c91e43a0d5738661635d6, type: 2}

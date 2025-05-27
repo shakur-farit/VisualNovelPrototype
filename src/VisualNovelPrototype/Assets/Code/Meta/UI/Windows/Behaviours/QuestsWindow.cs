@@ -34,13 +34,11 @@ namespace Code.Meta.UI.Windows.Behaviours
 		protected override void Initialize()
 		{
 			_closeButton.onClick.AddListener(CloseWindow);
+			_descriptionUpdater.OnActiveLevelSelected += UpdateDescriptionText;
 
 			SetHolders();
 			ShowQuestItems();
 		}
-
-		protected override void SubscribeUpdates() => 
-			_descriptionUpdater.OnActiveLevelSelected += UpdateDescriptionText;
 
 		protected override void UnsubscribeUpdates() => 
 			_descriptionUpdater.OnActiveLevelSelected -= UpdateDescriptionText;
@@ -55,7 +53,10 @@ namespace Code.Meta.UI.Windows.Behaviours
 		private void UpdateDescriptionText(string text) => 
 			_questDescriptionText.text = text;
 
-		private void CloseWindow() => 
+		private void CloseWindow()
+		{
+			_questShower.ResetShowedQuest();
 			_windowService.Close(WindowId.QuestWindow);
+		}
 	}
 }
