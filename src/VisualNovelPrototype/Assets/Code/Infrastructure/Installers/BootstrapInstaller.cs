@@ -60,7 +60,7 @@ namespace Code.Infrastructure.Installers
 		private void BindGameplayServices()
 		{
 			Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle();
-			Container.Bind<IQuestService>().To<QuestService>().AsSingle();
+			Container.BindInterfacesAndSelfTo<QuestService>().AsSingle();
 			Container.Bind<IMinigameService>().To<MinigameService>().AsSingle();
 		}
 

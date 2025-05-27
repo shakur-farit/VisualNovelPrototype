@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-using Code.Gameplay.Quest;
-using Code.Gameplay.Quest.Behaviours;
-using Code.Gameplay.Quest.Factory;
 using Code.Gameplay.Quest.Service;
 using Code.Meta.UI.Windows.Services;
 using TMPro;
@@ -18,57 +14,43 @@ namespace Code.Meta.UI.Windows.Behaviours
 		[SerializeField] private TextMeshProUGUI _questDescriptionText;
 		[SerializeField] private Button _closeButton;
 
-		private readonly List<QuestItem> _questItems = new();
-
-		private IQuestService _questService;
-		private IQuestItemFactory _questItemFactory;
+		private IQuestShower _questShower;
 		private IWindowService _windowService;
+		private IQuestDescriptionUpdater _descriptionUpdater;
 
 		[Inject]
 		public void Constructor(
-			IQuestService questService, 
-			IQuestItemFactory questItemFactory,
+			IQuestShower questShower,
+			IQuestDescriptionUpdater descriptionUpdater,
 			IWindowService windowService)
 		{
 			Id = WindowId.QuestWindow;
 
-			_questService = questService;
-			_questItemFactory = questItemFactory;
+			_questShower = questShower;
+			_descriptionUpdater = descriptionUpdater;
 			_windowService = windowService;
 		}
 
 		protected override void Initialize()
 		{
 			_closeButton.onClick.AddListener(CloseWindow);
-			
-			CreateQuestItems();
+
+			SetHolders();
+			ShowQuestItems();
 		}
 
-		private void CreateQuestItems()
-		{
-			ClearItemsHolder();
+		protected override void SubscribeUpdates() => 
+			_descriptionUpdater.OnActiveLevelSelected += UpdateDescriptionText;
 
-			foreach (QuestTypeId questTypeId in _questService.Quests.Keys)
-			{
-				QuestItem item = 
-					_questItemFactory
-						.CreateQuestItem(
-							questTypeId,
-							_questItemsHolder, 
-							UpdateDescriptionText, 
-							_questService.Quests[questTypeId], 
-							_questLevelItemsHolder);
-				_questItems.Add(item);
-			}
-		}
+		protected override void UnsubscribeUpdates() => 
+			_descriptionUpdater.OnActiveLevelSelected -= UpdateDescriptionText;
 
-		private void ClearItemsHolder()
-		{
-			foreach (QuestItem questItem in _questItems) 
-				Destroy(questItem.gameObject);
-			
-			_questItems.Clear();
-		}
+		private void SetHolders() => 
+			_questShower.SetHolders(_questItemsHolder, _questLevelItemsHolder);
+
+		private void ShowQuestItems() => 
+			_questShower.ShowQuests();
+
 
 		private void UpdateDescriptionText(string text) => 
 			_questDescriptionText.text = text;

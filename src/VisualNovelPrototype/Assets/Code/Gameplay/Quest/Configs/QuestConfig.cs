@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Code.Gameplay.Quest.Configs
 {
@@ -16,9 +15,20 @@ namespace Code.Gameplay.Quest.Configs
 	[Serializable]
 	public class QuestLevel
 	{
-		[FormerlySerializedAs("Status")] public QuestLevelStatus levelStatus;
+		public QuestLevelStatus levelStatus;
 		public string Title;
 		public string Description;
 		public GameObject PrefabView;
+
+		public QuestLevel Clone()
+		{
+			return new QuestLevel
+			{
+				levelStatus = this.levelStatus,
+				Title = this.Title,
+				Description = this.Description,
+				PrefabView = this.PrefabView
+			};
+		}
 	}
 }

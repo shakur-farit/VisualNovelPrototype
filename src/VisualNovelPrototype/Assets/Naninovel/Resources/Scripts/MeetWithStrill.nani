@@ -27,6 +27,8 @@ Strill: Сыграй со мной в игру. И если ты победиш�
 Strill: А если нет. То я придумаю для тебя другое занятее. Идет?
 @hide Strill
 
+@updateQuest id:ReturnTheLostItem
+
 @hidePrinter
 
 @startMinigame
@@ -56,6 +58,8 @@ Hero: Ну посмотрим...
 @hidePrinter
 
 @openInteractiveWindow
+@updateQuest id:ReturnTheLostItem
+
 @createKey
 @createDoor
 

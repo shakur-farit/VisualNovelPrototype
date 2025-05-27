@@ -2,9 +2,10 @@
 
 @char Hero.Default pos:0
 Hero: Отлично... Где тут наш сейф... 
-Hero: Вот ты где... <skip 
+Hero: Вот ты где..
 @hide Hero
 
+@updateQuest id:ReturnTheLostItem
 @createSafe
 
 @char Hero.Default pos:0

@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Code.Gameplay.Quest.Behaviours;
 using Code.Gameplay.Quest.Configs;
 using Code.Infrastructure.StaticData;
@@ -19,12 +17,12 @@ namespace Code.Gameplay.Quest.Factory
 			_instantiator = instantiator;
 		}
 
-		public QuestItem CreateQuestItem(QuestTypeId id, Transform parent, Action<string> action, List<QuestLevel> levels, Transform levelParent)
+		public QuestItem CreateQuestItem(QuestTypeId id, Transform parent)
 		{
 			QuestConfig config = _staticDataService.GetQuestConfig(id);
 
 			QuestItem item = _instantiator.InstantiatePrefabForComponent<QuestItem>(config.PrefabView, parent);
-			item.Setup(config, action, levels, levelParent);
+			item.Setup(config);
 			return item;
 		}
 	}

@@ -16,7 +16,7 @@ namespace Code.Gameplay.Quest.Commands
 			Debug.LogWarning($"{QuestId}");
 
 			DiContainer container = ProjectContext.Instance.Container;
-			IQuestService questService = container.Resolve<IQuestService>();
+			IQuestUpdater questService = container.Resolve<IQuestUpdater>();
 
 			if (Enum.TryParse<QuestTypeId>(QuestId, ignoreCase: true, out var questType))
 				questService.UpdateQuest(questType);

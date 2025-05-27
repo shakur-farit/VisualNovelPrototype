@@ -5,6 +5,8 @@ Hero: Куда слинял этот тип?!
 Hero: Неужели он думал что я буду возиться с этим сейфом? Шутник...
 @hide Hero
 
+@updateQuest id:ReturnTheLostItem
+
 @hidePrinter
 
 @goTo BackToAlex

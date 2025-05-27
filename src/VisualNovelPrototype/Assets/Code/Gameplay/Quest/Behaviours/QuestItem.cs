@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
 using Code.Gameplay.Quest.Configs;
-using Code.Gameplay.Quest.Factory;
+using Code.Gameplay.Quest.Service;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,47 +12,29 @@ namespace Code.Gameplay.Quest.Behaviours
 		[SerializeField] private TextMeshProUGUI _title;
 		[SerializeField] private Button _selectButton;
 
-		private bool _levelsInstantiated = false;
-		private Action<string> _onSelected;
+		private bool _levelsIsShowed;
 
-		private IQuestLevelItemFactory _factory;
+		private IQuestShower _questService;
 
 		[Inject]
-		public void Constructor(IQuestLevelItemFactory factory) => 
-			_factory = factory;
+		public void Constructor(IQuestShower questService) => 
+			_questService = questService;
 
-		public void Setup(QuestConfig config, Action<string> action, List<QuestLevel> levels, Transform levelParent)
+		public void Setup(QuestConfig config)
 		{
 			_title.text = config.Id.ToString();
-			_onSelected = action;
 
 			_selectButton.onClick.RemoveAllListeners();
-			_selectButton.onClick.AddListener(() => OnClicked(levels, levelParent));
-			_selectButton.onClick.AddListener(() => BindEvents(levels));
+			_selectButton.onClick.AddListener(() => OnClicked(config));
 		}
 
-		private void OnClicked(List<QuestLevel> levels, Transform levelParent)
+		private void OnClicked(QuestConfig config)
 		{
-			if (_levelsInstantiated)
+			if (_levelsIsShowed)
 				return;
 
-			foreach (QuestLevel level in levels)
-			{
-				if (level.levelStatus == QuestLevelStatus.Active ||
-				    level.levelStatus == QuestLevelStatus.Completed)
-				{
-					_factory.CreateQuestLevelItem(level, levelParent);
-				}
-			}
-
-			_levelsInstantiated = true;
-		}
-
-		private void BindEvents(List<QuestLevel> levels)
-		{
-			foreach (QuestLevel level in levels)
-				if (level.levelStatus == QuestLevelStatus.Active)
-					_selectButton.onClick.AddListener(() => _onSelected?.Invoke(level.Description));
+			_questService.ShowQuestLevels(config.Id);
+			_levelsIsShowed = true;
 		}
 	}
 }

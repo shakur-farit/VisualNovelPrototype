@@ -20,6 +20,8 @@ Strill: Или ты можешь отдать устройство мне и м�
 Alex: Стрилл ты скотина.
 @hide Alex
 
+@updateQuest id:ReturnTheLostItem
+
 @choice "Отдать Алексу." set:deviceOwner="alex" goto:.alexPath
 @choice "Отдать Стриллу." set:deviceOwner="strill" goto:.strillPath
 @choice "Оставить себе." set:deviceOwner="hero" goto:.heroPath
@@ -59,6 +61,7 @@ Strill: Глупец. Советую теперь оглядываться по 
 @hide Strill
 
 # afterChoice
+@updateQuest id:ReturnTheLostItem
 @activateMapPoints
 @hidePrinter
 @stop
