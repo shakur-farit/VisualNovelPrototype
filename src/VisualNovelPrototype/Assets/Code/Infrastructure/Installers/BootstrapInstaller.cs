@@ -1,6 +1,7 @@
 using Code.Gameplay.IntearctiveObject.Commands;
 using Code.Gameplay.Minigame.Factory;
 using Code.Gameplay.Minigame.Service;
+using Code.Gameplay.Quest;
 using Code.Gameplay.Quest.Factory;
 using Code.Gameplay.Quest.Service;
 using Code.Infrastructure.AssetsManagement;
@@ -31,6 +32,7 @@ namespace Code.Infrastructure.Installers
 			BindGameplayFactories();
 			BindUIFactories();
 			BindUIServices();
+			BindAudioFactories();
 		}
 
 		private void BindStateMachine()
@@ -84,6 +86,8 @@ namespace Code.Infrastructure.Installers
 			Container.Bind<IMapPointActivator>().To<MapPointActivator>().AsSingle();
 		}
 
+		private void BindAudioFactories() => 
+			Container.Bind<ISoundEffectFactory>().To<SoundEffectFactory>().AsSingle();
 
 		private void BindInfrastructureServices()
 		{

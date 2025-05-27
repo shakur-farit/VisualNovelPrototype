@@ -1,5 +1,5 @@
 @back SecondLocation
-
+@bgm street volume:0.5
 @char Hero.Default pos:0
 Hero: Hey. You Strill?
 @hide Hero
@@ -13,7 +13,7 @@ Hero: Alex sent me. He’s pretty damn eager to get his little toy back.
 @hide Hero
 
 @char Strill.Default pos:80
-Strill: Oh, he *asked*, did he? And what if I say no?
+Strill: Oh, he asked, did he? And what if I say no?
 @hide Strill
 
 @char Hero.Default pos:0
@@ -24,7 +24,7 @@ Hero: Then I’ll have to take it from you.
 Strill: Whoa, look at you, all full of fire. Do you even know what this is about?
 Strill: Thought not... Alright, how about this.
 Strill: Play a game with me. If you win, I’ll tell you what the device really is—and where it’s stashed.
-Strill: If you lose... well, I’ll find something *fun* for you to do. Deal?
+Strill: If you lose... well, I’ll find something fun for you to do. Deal?
 @hide Strill
 
 @updateQuest id:ReturnTheLostItem
@@ -38,7 +38,7 @@ Strill: Not bad... not bad at all.
 Strill: I’m a man of my word. Here—warehouse key. What you're looking for is in there.
 Strill: Bet Alex didn’t tell you what you're actually after, huh?
 Strill: It’s a prototype. Next-gen tech. Word is, it’s worth a small fortune.
-Strill: So here’s the pitch—*you* grab the device, *I* move it on the black market.
+Strill: So here’s the pitch—you grab the device, I move it on the black market.
 Strill: We split the creds. Whatever he offered, I’ll triple it.
 @hide Strill
 
@@ -63,7 +63,7 @@ Hero: We’ll see…
 
 @createKey
 @createDoor
-
+@stopBgm street
 @goTo Depot
 
 @stop

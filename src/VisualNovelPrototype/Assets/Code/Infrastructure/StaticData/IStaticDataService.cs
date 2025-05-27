@@ -16,5 +16,6 @@ namespace Code.Infrastructure.StaticData
 		QuestConfig GetQuestConfig(QuestTypeId id);
 		CardConfig GetCardConfig(CardTypeId id);
 		InteractiveObjectConfig GetInteractiveObjectConfig(InteractiveObjectTypeId id);
+		SoundEffectConfig GetSoundEffectConfig(SoundEffectTypeId id);
 	}
 }

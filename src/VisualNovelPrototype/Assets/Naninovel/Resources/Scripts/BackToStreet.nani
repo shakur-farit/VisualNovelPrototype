@@ -1,5 +1,5 @@
 @back SecondLocation
-
+@bgm street volume:0.5
 @char Hero.Default pos:0
 Hero: Where the hell did that guy disappear to?!
 Hero: Thought I’d mess around with that safe? What a joker...
@@ -8,7 +8,7 @@ Hero: Thought I’d mess around with that safe? What a joker...
 @updateQuest id:ReturnTheLostItem
 
 @hidePrinter
-
+@stopBgm street
 @goTo BackToAlex
 
 @stop

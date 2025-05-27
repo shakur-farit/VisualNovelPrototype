@@ -1,5 +1,5 @@
 @back FirstLocation
-
+@bgm bar volume:0.2
 @char Alex.Default pos:60 look:left
 Alex: Finally. I thought they had you locked up. Did you bring it?
 @hide Alex
@@ -64,4 +64,5 @@ Strill: Fool. Better start watching your back.
 @updateQuest id:ReturnTheLostItem
 @activateMapPoints
 @hidePrinter
+@stopBgm bar
 @stop

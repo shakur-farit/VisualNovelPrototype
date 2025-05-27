@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 42c38d6ff02352f45aa95f80a7a9c67f
   m_currentHash:
     serializedVersion: 2
-    Hash: 0c83f1506392142055e57edfa604eb42
+    Hash: 777e184e8932a808915bb87d32fdba2a
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -91,6 +91,7 @@ MonoBehaviour:
     - QuestConfig
     - CardConfig
     - InteractiveObjectConfig
+    - SoundEffectConfig
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 6cd64ca4f36c91e43a0d5738661635d6, type: 2}

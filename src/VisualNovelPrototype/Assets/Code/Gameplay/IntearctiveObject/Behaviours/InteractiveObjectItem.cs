@@ -1,3 +1,4 @@
+using Code.Gameplay.Quest;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +11,15 @@ namespace Code.Gameplay.IntearctiveObject.Commands
 		[SerializeField] private Button _activateButton;
 
 		private UniTaskCompletionSource _keyUsedTsc;
-		
+
+		private ISoundEffectFactory _soundEffectFactory;
+
+		[Inject]
+		public void Constructor(ISoundEffectFactory soundEffectFactory) => 
+			_soundEffectFactory = soundEffectFactory;
+
 		private void Start() => 
-			_activateButton.onClick.AddListener(UseKye);
+			_activateButton.onClick.AddListener(Use);
 
 		public UniTask OpenTask()
 		{
@@ -21,8 +28,10 @@ namespace Code.Gameplay.IntearctiveObject.Commands
 			return _keyUsedTsc.Task;
 		}
 
-		private void UseKye()
+		private void Use()
 		{
+			_soundEffectFactory.CreateSoundEffect(SoundEffectTypeId.Click);
+
 			_keyUsedTsc?.TrySetResult();
 
 			Destroy(gameObject);

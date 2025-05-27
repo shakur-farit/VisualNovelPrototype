@@ -1,9 +1,10 @@
 @back ThirdLocation
-
+@bgm fan volume:0.5
 @char Hero.Default pos:0
 Hero: Alright... where’s that safe around here...
 Hero: There you are...
 @hide Hero
+@hidePrinter
 
 @updateQuest id:ReturnTheLostItem
 @createSafe
@@ -14,7 +15,7 @@ Hero: This device is actually pretty damn interesting.
 @hide Hero
 
 @hidePrinter
-
+@stopBgm fan
 @goTo BackToStreet
 
 @stop

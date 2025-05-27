@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54f44e8254421ed4ebb757276a846e15, type: 3}
-  m_Name: SafeInteractiveObjectConfig
+  m_Script: {fileID: 11500000, guid: 120ed920d45b9e14ba16b5cab9827755, type: 3}
+  m_Name: ErrorSoundEffectConfig
   m_EditorClassIdentifier: 
-  TypeId: 3
-  ViewPrefab: {fileID: 7295114353781284294, guid: 296362705e21e0b4991fbcce0d715948, type: 3}
+  TypeId: 2
+  AudioClip: {fileID: 8300000, guid: d8c9118a25d444a4383bc5f0258a267b, type: 3}
+  ViewPrefab: {fileID: 1389570436451815668, guid: 83659c9a14311a149bc41d221cca4f35, type: 3}

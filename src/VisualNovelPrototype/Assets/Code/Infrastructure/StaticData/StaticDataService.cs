@@ -19,11 +19,13 @@ namespace Code.Infrastructure.StaticData
 		private const string QuestConfigLabel = "QuestConfig";
 		private const string CardConfigLabel = "CardConfig";
 		private const string InteractiveObjectConfigLabel = "InteractiveObjectConfig";
+		private const string SoundEffectConfigLabel = "SoundEffectConfig";
 		
 		private Dictionary<WindowId, WindowConfig> _windowById;
 		private Dictionary<QuestTypeId, QuestConfig> _questById;
 		private Dictionary<CardTypeId, CardConfig> _cardById;
 		private Dictionary<InteractiveObjectTypeId, InteractiveObjectConfig> _interactiveObjectById;
+		private Dictionary<SoundEffectTypeId, SoundEffectConfig> _soundEffectById;
 
 		private readonly IAssetProvider _assetProvider;
 
@@ -36,6 +38,7 @@ namespace Code.Infrastructure.StaticData
 			await LoadQuests();
 			await LoadCards();
 			await LoadInteractiveObjects();
+			await LoadSoundEffectObjects();
 		}
 
 		public WindowConfig GetWindowConfig(WindowId id)
@@ -70,6 +73,14 @@ namespace Code.Infrastructure.StaticData
 			throw new Exception($"Interactive object config for {id} was not found");
 		}
 
+		public SoundEffectConfig GetSoundEffectConfig(SoundEffectTypeId id)
+		{
+			if (_soundEffectById.TryGetValue(id, out SoundEffectConfig config))
+				return config;
+
+			throw new Exception($"Sound effect config for {id} was not found");
+		}
+
 		private async UniTask LoadWindows() =>
 			_windowById = (await _assetProvider.LoadAll<WindowConfig>(WindowConfigLabel))
 				.ToDictionary(x => x.TypeId, x => x);
@@ -86,5 +97,8 @@ namespace Code.Infrastructure.StaticData
 			_interactiveObjectById = (await _assetProvider.LoadAll<InteractiveObjectConfig>(InteractiveObjectConfigLabel))
 				.ToDictionary(x => x.TypeId, x => x);
 
+		private async UniTask LoadSoundEffectObjects() =>
+			_soundEffectById = (await _assetProvider.LoadAll<SoundEffectConfig>(SoundEffectConfigLabel))
+				.ToDictionary(x => x.TypeId, x => x);
 	}
 }

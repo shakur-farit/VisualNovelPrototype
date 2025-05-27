@@ -1,5 +1,5 @@
 @back FirstLocation
-
+@bgm bar volume:0.2
 @showHud
 
 @char Hero.Default pos:0
@@ -41,6 +41,6 @@ Alex: Good. I’ll be waiting. Don’t keep me hanging.
 @updateQuest id:ReturnTheLostItem
 
 @hidePrinter
-
+@stopBgm bar
 @goto MeetWithStrill
 @stop

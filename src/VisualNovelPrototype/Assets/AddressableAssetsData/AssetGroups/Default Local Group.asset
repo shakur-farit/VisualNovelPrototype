@@ -113,6 +113,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - InteractiveObjectConfig
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65370fc4f966136488cb03011ee3f89d
+    m_Address: Assets/StaticData/Audio/ClickSoundEffectConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SoundEffectConfig
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad11ab573b74faa49b8a34b6952a0c12
+    m_Address: Assets/StaticData/Audio/ErrorSoundEffectConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SoundEffectConfig
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6c2c754be13e78148ac40bc11972d3dc, type: 2}
   m_SchemaSet:
