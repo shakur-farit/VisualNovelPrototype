@@ -4,17 +4,17 @@
 
 @if deviceOwner=="alex"
 @char Strill.Default pos:80
-Strill: Зря ты не отдал устройство мне. Мы заработали на много больше чем ты получил от этого скряги.
+Strill: You made a mistake not giving me the device. We could have made way more than you got from that cheapskate.
 @hide Strill
 
 @elseif deviceOwner=="strill"
 @char Strill.Default pos:80
-Strill: Привет партнер. Я пока не нашёл покупателей. Но не волнуйся, на такую вещицу быстро найется спрос.
+Strill: Hey partner. I haven’t found buyers yet, but don’t worry — demand for a thing like this will pop up fast.
 @hide Strill
 
 @else
 @char Strill.Default pos:80
-Strill: Думаешь успеешь воспользоваться устройством? Очень сильно сомневаюсь.
+Strill: Think you’ll get to use that device? I highly doubt it.
 @hide Strill
 @endif
 

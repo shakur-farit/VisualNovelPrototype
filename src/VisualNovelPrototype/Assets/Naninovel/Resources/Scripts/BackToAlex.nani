@@ -1,63 +1,63 @@
 @back FirstLocation
 
 @char Alex.Default pos:60 look:left
-Alex: Ну наконец то. Я уж думал тебя сцапали. Принес?
+Alex: Finally. I thought they had you locked up. Did you bring it?
 @hide Alex
 
 @char Hero.Default pos:0
-Hero: Не задавай глупых вопросов. Конечно!
+Hero: Don’t ask dumb questions. Of course I did!
 @hide Hero
 
 @char Alex.Default pos:60 look:left
-Alex: Давай сюда.
+Alex: Hand it over.
 @hide Alex
 
 @char Strill.Default pos:80
-Strill: Или ты можешь отдать устройство мне и мы разрулим всё как и договривались.
+Strill: Or you can hand the device to me, and we’ll settle this the way we agreed.
 @hide Strill
 
 @char Alex.Default pos:60 look:left
-Alex: Стрилл ты скотина.
+Alex: Strill, you bastard.
 @hide Alex
 
 @updateQuest id:ReturnTheLostItem
 
-@choice "Отдать Алексу." set:deviceOwner="alex" goto:.alexPath
-@choice "Отдать Стриллу." set:deviceOwner="strill" goto:.strillPath
-@choice "Оставить себе." set:deviceOwner="hero" goto:.heroPath
+@choice "Give it to Alex." set:deviceOwner="alex" goto:.alexPath
+@choice "Give it to Strill." set:deviceOwner="strill" goto:.strillPath
+@choice "Keep it for yourself." set:deviceOwner="hero" goto:.heroPath
 @stop
 
 # alexPath
 @char Alex.Default pos:60 look:left
-Alex: Спасибо. Слухи о тебе не врали. Ты и вправду человек дела. Держи. Вот твоя награда.
+Alex: Thanks. The word on the street was right — you’re a person of action. Here’s your reward.
 @hide Alex
 
 @char Strill.Default pos:80
-Strill: И вот на эти гроши ты променял такую ценную вещь?! Я был лучшего мнения о тебе.
+Strill: You traded a valuable piece for some petty credits?! I expected better.
 @hide Strill
 @goto .afterChoice
 
 # strillPath
 @char Strill.Default pos:80
-Strill: Верное решение партнер. Я знал что ты умный человек.
+Strill: Smart move, partner. I always knew you were sharp.
 @hide Strill
 
 @char Alex.Default pos:60 look:left
-Alex: Я это так не оставлю. Теперь ходите оглядываясь.
+Alex: This isn’t over. Watch your back.
 @hide Alex
 @goto .afterChoice
 
 # heroPath
 @char Hero.Default pos:0
-Hero: А знаете что?! Оставлю ка я это устройство себе. Оно выглядит очень уж интересным.
+Hero: You know what? I’m keeping this device. It’s way too interesting.
 @hide Hero
 
 @char Alex.Default pos:60 look:left
-Alex: Ах ты ж... Я знал что охотникам нельзя доверять. У вас нет чести. Я этого так не оставлю
+Alex: You… I knew hunters couldn’t be trusted. No honor. This isn’t over.
 @hide Alex
 
 @char Strill.Default pos:80
-Strill: Глупец. Советую теперь оглядываться по сторонам.
+Strill: Fool. Better start watching your back.
 @hide Strill
 
 # afterChoice

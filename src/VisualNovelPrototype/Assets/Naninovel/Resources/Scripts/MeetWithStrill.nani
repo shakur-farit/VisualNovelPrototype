@@ -1,30 +1,30 @@
 @back SecondLocation
 
 @char Hero.Default pos:0
-Hero: Хей. Ты Стрилл?
+Hero: Hey. You Strill?
 @hide Hero
 
 @char Strill.Default pos:80
-Strill: Смотря кто спрашивает.
+Strill: Depends who’s asking.
 @hide Strill
 
 @char Hero.Default pos:0
-Hero: Меня отправил Алекс. Он очень настойчиво просил вернуть ему его вещицу.
+Hero: Alex sent me. He’s pretty damn eager to get his little toy back.
 @hide Hero
 
 @char Strill.Default pos:80
-Strill: Просил значит... А если я откажусь?
+Strill: Oh, he *asked*, did he? And what if I say no?
 @hide Strill
 
 @char Hero.Default pos:0
-Hero: Значит мне придеться отбирать эту вещицу у тебя.
+Hero: Then I’ll have to take it from you.
 @hide Hero
 
 @char Strill.Default pos:80
-Strill: Ого... Вот это прыть. Ты хоть знаешь о чем идет речь?
-Strill: Похоже что нет... Поступим так.
-Strill: Сыграй со мной в игру. И если ты победишь я тебе расскажу и о вещице и даже где ее найти.
-Strill: А если нет. То я придумаю для тебя другое занятее. Идет?
+Strill: Whoa, look at you, all full of fire. Do you even know what this is about?
+Strill: Thought not... Alright, how about this.
+Strill: Play a game with me. If you win, I’ll tell you what the device really is—and where it’s stashed.
+Strill: If you lose... well, I’ll find something *fun* for you to do. Deal?
 @hide Strill
 
 @updateQuest id:ReturnTheLostItem
@@ -34,25 +34,26 @@ Strill: А если нет. То я придумаю для тебя друго�
 @startMinigame
 
 @char Strill.Default pos:80
-Strill: Неплохо... Очень не плохо.
-Strill: Я человек слова. Вот тебе ключ от склада. То что тебе нужно там. Ты ведь не в курсе за чем тебя послал Алекс да?
-Strill: Это прототип нового устройства. Говорят стоит бешенных бабок.
-Strill: У меня к тебе деловое предложение. Давай ты принесешь мне это устройство, а я его кому нибудь вбагрю.
-Strill: Прибыль поделим. В любом случае это будет больше, чем то что предложил Алекс.
+Strill: Not bad... not bad at all.
+Strill: I’m a man of my word. Here—warehouse key. What you're looking for is in there.
+Strill: Bet Alex didn’t tell you what you're actually after, huh?
+Strill: It’s a prototype. Next-gen tech. Word is, it’s worth a small fortune.
+Strill: So here’s the pitch—*you* grab the device, *I* move it on the black market.
+Strill: We split the creds. Whatever he offered, I’ll triple it.
 @hide Strill
 
 @char Hero.Default pos:0
-Hero: А чего ты все ещё его не продал? У тебя ведь даже ключ есть.
+Hero: Then why haven’t you sold it already? You've got the key.
 @hide Hero
 
 @char Strill.Default pos:80
-Strill: Ключ то есть. Только устройство лежит в сейфе, который я не вскрою.
-Strill: Тут нужны ловкие ручонки. Например твои.
-Strill: Договрились? Принеси мне эту штуку и мы с тобой станем богачами.
+Strill: Sure, I’ve got the key. But the thing's locked in a safe I can’t crack.
+Strill: Needs delicate fingers. Yours, maybe.
+Strill: So? You in? Bring me the device, and we’ll both be stinkin’ rich.
 @hide Strill
 
 @char Hero.Default pos:0
-Hero: Ну посмотрим...
+Hero: We’ll see…
 @hide Hero
 
 @hidePrinter

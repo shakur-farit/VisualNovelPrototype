@@ -1,16 +1,16 @@
 @back ThirdLocation
 
 @char Hero.Default pos:0
-Hero: Отлично... Где тут наш сейф... 
-Hero: Вот ты где..
+Hero: Alright... where’s that safe around here...
+Hero: There you are...
 @hide Hero
 
 @updateQuest id:ReturnTheLostItem
 @createSafe
 
 @char Hero.Default pos:0
-Hero: Раз два и готово. А шума то столько развели.
-Hero: А утройство то и вправду интересное
+Hero: One, two, and done. All that noise for nothing.
+Hero: This device is actually pretty damn interesting.
 @hide Hero
 
 @hidePrinter

@@ -3,38 +3,39 @@
 @showHud
 
 @char Hero.Default pos:0
-Hero: Очередная дыра.
-Hero: Хотя... Тут не так уж и дурно. Покрайней мере по сравнению с тем что было в предыдущем городе.
-Hero: Посмотрим как тут можно подзаработать.
+Hero: Another hellhole.
+Hero: Then again... Not the worst place I’ve been. At least it doesn't reek of rot like the last sector.
+Hero: Time to see how people make creds around here.
 @hide Hero
 
 @char Alex.Default pos:60 look:left
-Alex: Вот это да. Это же {playerName} собственной персоной. Слава о тебе разнеслась далеко за пределы твоего родного городка.
+Alex: Well, well... if it isn’t {playerName} in the flesh. Word of you's been echoing way beyond your dump of a hometown.
 @hide Alex
 
 @char Hero.Default pos:0
-Hero: Ха... Овечка сама пришла.
+Hero: Heh... The lamb walks right into the lion’s den.
 @hide Hero
 
 @char Alex.Default pos:60 look:left
-Alex: Что?
+Alex: What was that?
 @hide Alex
 
 @char Hero.Default pos:0
-Hero: Ничего. Мы знакомы?
+Hero: Nothing. Do I know you?
 @hide Hero
 
 @char Alex.Default pos:60 look:left
-Alex: Нет. Но я знаю тебя. Ты ведь охотник. У меня есть задание для тебя. Тебе нужно навестить моего старого знакомого.
-Alex: У него есть вещица... МОЯ вещица. Я хочу что бы ты ее вернул мне. Любой ценой. Ты найдешь его на Вокер Стрит. Он занимается там своими фокусами. Возьмешся?
+Alex: No. But I know you. You’re a hunter. And I’ve got a job that needs someone with your... talents.
+Alex: There's a guy—used to be a contact. Now he’s just a glitch in my system. He’s got something of mine. Something valuable. I want it back—whatever it takes.
+Alex: You’ll find him on Walker Street. He’s running his little tricks there. So, you in?
 @hide Alex
 
 @char Hero.Default pos:0
-Hero: Не вопрос.
+Hero: Consider it done.
 @hide Hero
 
 @char Alex.Default pos:60 look:left
-Alex: Отлично. Буду ждать тебя здесь.
+Alex: Good. I’ll be waiting. Don’t keep me hanging.
 @hide Alex
 
 @updateQuest id:ReturnTheLostItem

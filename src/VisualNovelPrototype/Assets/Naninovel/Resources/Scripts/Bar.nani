@@ -6,18 +6,18 @@
 
 @if deviceOwner=="alex"
 @char Alex.Default pos:60 look:left
-Alex: Рад тебя видеть снова. Ищешь новую работенку?
-Alex: Пока ничем помочь не могу. Но если что я обязательно дам тебе знать.
+Alex: Good to see you again. Looking for some new work?
+Alex: I don’t have anything right now, but if something comes up, you’ll be the first to know.
 @hide Alex
 
 @elseif deviceOwner=="strill"
 @char Alex.Default pos:60 look:left
-Alex: Ты выбрал не ту сторону, охотник. Я запомню это.
+Alex: You picked the wrong side, hunter. I’ll remember that.
 @hide Alex
 
 @else
 @char Alex.Default pos:60 look:left
-Alex: Ты так и не отдал устройство. Это плохо для тебя закончится.
+Alex: You still haven’t handed over the device. That’s gonna end badly for you.
 @hide Alex
 @endif
 
