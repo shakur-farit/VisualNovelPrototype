@@ -1,4 +1,4 @@
-using Code.Gameplay.IntearctiveObject.Commands;
+using Code.Gameplay.IntearctiveObject.Factory;
 using UnityEngine;
 using Zenject;
 

@@ -1,3 +1,5 @@
+using Code.Gameplay.IntearctiveObject.Behaviours;
+using Code.Gameplay.IntearctiveObject.Factory;
 using Naninovel;
 using Zenject;
 

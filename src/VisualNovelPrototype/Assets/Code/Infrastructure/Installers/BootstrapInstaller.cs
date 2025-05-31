@@ -1,4 +1,6 @@
+using Code.Audio.SoundEffects.Factory;
 using Code.Gameplay.IntearctiveObject.Commands;
+using Code.Gameplay.IntearctiveObject.Factory;
 using Code.Gameplay.Minigame.Factory;
 using Code.Gameplay.Minigame.Service;
 using Code.Gameplay.Quest;
@@ -6,6 +8,7 @@ using Code.Gameplay.Quest.Factory;
 using Code.Gameplay.Quest.Service;
 using Code.Infrastructure.AssetsManagement;
 using Code.Infrastructure.Loading;
+using Code.Infrastructure.ScenarioSwitching;
 using Code.Infrastructure.States.Factory;
 using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;

@@ -1,14 +1,15 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-    <type fullname="Code.Gameplay.IntearctiveObject.Commands.InteractiveObjectConfig" preserve="all" />
-    <type fullname="Code.Gameplay.IntearctiveObject.Commands.InteractiveObjectItem" preserve="all" />
+    <type fullname="Code.Audio.SoundEffects.Configs.SoundEffectConfig" preserve="all" />
+    <type fullname="Code.Audio.SoundEffects.SoundSfx" preserve="all" />
+    <type fullname="Code.Gameplay.IntearctiveObject.Behaviours.InteractiveObjectItem" preserve="all" />
+    <type fullname="Code.Gameplay.IntearctiveObject.Configs.InteractiveObjectConfig" preserve="all" />
     <type fullname="Code.Gameplay.Minigame.Behaviours.CardItem" preserve="all" />
     <type fullname="Code.Gameplay.Minigame.Configs.CardConfig" preserve="all" />
     <type fullname="Code.Gameplay.Quest.Behaviours.QuestItem" preserve="all" />
     <type fullname="Code.Gameplay.Quest.Behaviours.QuestLevelItem" preserve="all" />
+    <type fullname="Code.Gameplay.Quest.Behaviours.QuestNotification" preserve="all" />
     <type fullname="Code.Gameplay.Quest.Configs.QuestConfig" preserve="all" />
-    <type fullname="Code.Gameplay.Quest.SoundEffectConfig" preserve="all" />
-    <type fullname="Code.Gameplay.Quest.SoundSfx" preserve="all" />
     <type fullname="Code.Meta.UI.Windows.Behaviours.HudWindow" preserve="all" />
     <type fullname="Code.Meta.UI.Windows.Behaviours.InteractiveWindow" preserve="all" />
     <type fullname="Code.Meta.UI.Windows.Behaviours.InvalidNameWindow" preserve="all" />
@@ -20,8 +21,8 @@
     <type fullname="Code.Meta.UI.Windows.Configs.WindowConfig" preserve="all" />
     <type fullname="Code.Gameplay.Quest.Configs.QuestLevel" preserve="nothing" serialized="true" />
     <type fullname="Code.Gameplay.Hud.Commands.ShowHud" preserve="nothing" serialized="true" />
-    <type fullname="Code.Meta.UI.Windows.Services.ActivateMapPoints" preserve="nothing" serialized="true" />
-    <type fullname="Code.Meta.UI.Windows.Services.DeactivateMapPoints" preserve="nothing" serialized="true" />
+    <type fullname="Code.Meta.UI.Commands.ActivateMapPoints" preserve="nothing" serialized="true" />
+    <type fullname="Code.Meta.UI.Commands.DeactivateMapPoints" preserve="nothing" serialized="true" />
     <type fullname="Code.Gameplay.Quest.Commands.UpdateQuest" preserve="nothing" serialized="true" />
     <type fullname="Code.Gameplay.IntearctiveObject.Commands.CreateSafe" preserve="nothing" serialized="true" />
     <type fullname="Code.Gameplay.IntearctiveObject.Commands.CreateDoor" preserve="nothing" serialized="true" />

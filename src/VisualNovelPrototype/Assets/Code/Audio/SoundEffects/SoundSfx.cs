@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Gameplay.Quest
+namespace Code.Audio.SoundEffects
 {
 	public class SoundSfx : MonoBehaviour
 	{

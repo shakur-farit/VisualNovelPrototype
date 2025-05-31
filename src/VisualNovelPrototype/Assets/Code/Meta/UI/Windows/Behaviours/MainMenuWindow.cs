@@ -3,6 +3,8 @@ using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Meta.UI.Windows.Services;
 using System.Text.RegularExpressions;
+using Code.Audio.SoundEffects;
+using Code.Audio.SoundEffects.Factory;
 using Code.Gameplay.Quest;
 using Code.Progress.Provider;
 using TMPro;

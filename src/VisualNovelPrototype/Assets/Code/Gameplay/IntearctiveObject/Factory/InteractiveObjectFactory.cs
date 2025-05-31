@@ -1,8 +1,10 @@
+using Code.Gameplay.IntearctiveObject.Behaviours;
+using Code.Gameplay.IntearctiveObject.Configs;
 using Code.Infrastructure.StaticData;
 using UnityEngine;
 using Zenject;
 
-namespace Code.Gameplay.IntearctiveObject.Commands
+namespace Code.Gameplay.IntearctiveObject.Factory
 {
 	public class InteractiveObjectFactory : IInteractiveObjectFactory
 	{

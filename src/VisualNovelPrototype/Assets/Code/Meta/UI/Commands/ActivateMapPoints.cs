@@ -1,8 +1,8 @@
+using Code.Meta.UI.Windows.Services;
 using Naninovel;
-using Unity.VisualScripting;
 using Zenject;
 
-namespace Code.Meta.UI.Windows.Services
+namespace Code.Meta.UI.Commands
 {
 	public class ActivateMapPoints : Command
 	{

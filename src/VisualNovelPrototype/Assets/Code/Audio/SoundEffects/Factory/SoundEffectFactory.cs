@@ -1,7 +1,7 @@
 using Code.Infrastructure.StaticData;
 using Zenject;
 
-namespace Code.Gameplay.Quest
+namespace Code.Audio.SoundEffects.Factory
 {
 	public class SoundEffectFactory : ISoundEffectFactory
 	{

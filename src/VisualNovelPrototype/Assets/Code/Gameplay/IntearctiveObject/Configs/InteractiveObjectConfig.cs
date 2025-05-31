@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Gameplay.IntearctiveObject.Commands
+namespace Code.Gameplay.IntearctiveObject.Configs
 {
 	[CreateAssetMenu(menuName = "Novel/Interactive Object Config", fileName = "InteractiveObjectConfig")]
 	public class InteractiveObjectConfig : ScriptableObject

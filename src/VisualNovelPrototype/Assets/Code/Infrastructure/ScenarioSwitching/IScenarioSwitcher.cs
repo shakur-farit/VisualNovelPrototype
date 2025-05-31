@@ -1,6 +1,6 @@
 using Naninovel;
 
-namespace Code.Meta.UI.Windows.Services
+namespace Code.Infrastructure.ScenarioSwitching
 {
 	public interface IScenarioSwitcher
 	{

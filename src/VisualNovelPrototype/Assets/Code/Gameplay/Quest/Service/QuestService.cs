@@ -6,7 +6,6 @@ using Code.Gameplay.Quest.Configs;
 using Code.Gameplay.Quest.Factory;
 using Code.Infrastructure.StaticData;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Code.Gameplay.Quest.Service
 {
@@ -15,6 +14,9 @@ namespace Code.Gameplay.Quest.Service
 		public const int FirstQuest = 0;
 
 		public event Action<string> OnActiveLevelSelected;
+
+		public event Action OnQuestCompleted;
+		public event Action OnQuestUpdated;
 
 		private readonly Dictionary<QuestTypeId, List<QuestLevel>> _quests = new();
 		private readonly List<QuestLevelItem> _questLevelItems = new();
@@ -39,10 +41,8 @@ namespace Code.Gameplay.Quest.Service
 
 		public void UpdateQuest(QuestTypeId id)
 		{
-			if (_quests.ContainsKey(id) == false)
-			{
+			if (_quests.ContainsKey(id) == false) 
 				AddQuest(id);
-			}
 
 			QuestLevel current = GetActiveLevel(id);
 			if (current != null)
@@ -52,6 +52,7 @@ namespace Code.Gameplay.Quest.Service
 			if (next != null)
 			{
 				next.levelStatus = QuestLevelStatus.Active;
+				OnQuestUpdated?.Invoke();
 				return;
 			}
 
@@ -137,8 +138,11 @@ namespace Code.Gameplay.Quest.Service
 			return null;
 		}
 
-		private void CompleteQuest(QuestTypeId id) =>
+		private void CompleteQuest(QuestTypeId id)
+		{
 			_quests.Remove(id);
+			OnQuestCompleted?.Invoke();
+		}
 
 		private QuestConfig GetConfig(QuestTypeId id) =>
 			_staticDataService.GetQuestConfig(id);
@@ -147,7 +151,7 @@ namespace Code.Gameplay.Quest.Service
 		{
 			foreach (QuestLevelItem item in _questLevelItems)
 				if (item != null)
-					Object.Destroy(item.gameObject);
+					UnityEngine.Object.Destroy(item.gameObject);
 
 			_questLevelItems.Clear();
 		}

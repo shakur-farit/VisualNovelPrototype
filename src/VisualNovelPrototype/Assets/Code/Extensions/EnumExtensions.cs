@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace Code.Progress.Provider
+namespace Code.Extensions
 {
 	public static class EnumExtensions
 	{

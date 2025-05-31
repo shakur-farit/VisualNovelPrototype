@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Gameplay.Quest
+namespace Code.Audio.SoundEffects.Configs
 {
 	[CreateAssetMenu(menuName = "Novel/Sound Effect Config", fileName = "SoundEffectConfig")]
 	public class SoundEffectConfig : ScriptableObject

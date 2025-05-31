@@ -1,4 +1,4 @@
-namespace Code.Gameplay.Quest
+namespace Code.Audio.SoundEffects
 {
 	public enum SoundEffectTypeId
 	{

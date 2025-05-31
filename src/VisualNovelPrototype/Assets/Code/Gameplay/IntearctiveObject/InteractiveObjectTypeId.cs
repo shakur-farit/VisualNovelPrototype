@@ -1,4 +1,4 @@
-namespace Code.Gameplay.IntearctiveObject.Commands
+namespace Code.Gameplay.IntearctiveObject
 {
 	public enum InteractiveObjectTypeId
 	{

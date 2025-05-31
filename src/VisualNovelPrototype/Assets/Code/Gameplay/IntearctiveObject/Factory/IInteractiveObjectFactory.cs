@@ -1,6 +1,7 @@
+using Code.Gameplay.IntearctiveObject.Behaviours;
 using UnityEngine;
 
-namespace Code.Gameplay.IntearctiveObject.Commands
+namespace Code.Gameplay.IntearctiveObject.Factory
 {
 	public interface IInteractiveObjectFactory
 	{

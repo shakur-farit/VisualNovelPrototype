@@ -1,10 +1,11 @@
-using Code.Gameplay.Quest;
+using Code.Audio.SoundEffects;
+using Code.Audio.SoundEffects.Factory;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Code.Gameplay.IntearctiveObject.Commands
+namespace Code.Gameplay.IntearctiveObject.Behaviours
 {
 	public class InteractiveObjectItem : MonoBehaviour
 	{

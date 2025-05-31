@@ -1,7 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Code.Audio.SoundEffects;
+using Code.Audio.SoundEffects.Configs;
+using Code.Gameplay.IntearctiveObject;
 using Code.Gameplay.IntearctiveObject.Commands;
+using Code.Gameplay.IntearctiveObject.Configs;
 using Code.Gameplay.Minigame;
 using Code.Gameplay.Minigame.Configs;
 using Code.Gameplay.Quest;
